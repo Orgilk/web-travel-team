@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <script type="module" src="./coms/num-comment.js"></script>
+    <script type="module" src="./coms/num-likes.js"></script>
+    <style>
+        article {width:50vw; margin:8px; padding:8px; border:1px solid grey;}
+        .liked {box-shadow: 0px 0px 4px #f00;}
+
+    </style>
+</head>
+<body>
+    <!-- <button id="btn" onclick="addComment()"> + </button> -->
+    <button id="btn"> + </button>
+
+    <num-comment body="asd fasdf" likes="89"></num-comment>
+    <num-comment body="yjfyuj" likes="3"></num-comment>
+    <num-comment body="vbnm vm"></num-comment>
+    <num-comment></num-comment>
+    <script>
+        document
+        .getElementById("btn")
+        .addEventListener("click", 
+        e=>{
+            // document.getElementById("btn")
+            // .insertAdjacentHTML("afterend",
+            //    `<num-comment 
+            //         body="New comment" 
+            //         likes="1>
+            //     </num-comment>`
+            // )
+
+            const cmnt = document
+                            .createElement("num-comment");
+            cmnt.setAttribute("body","Шинэ коммент");
+            cmnt.setAttribute("likes","1");
+            cmnt.setAttribute("id","c1");
+            document.getElementById("btn")
+            .insertAdjacentElement("afterend", cmnt);
+        });
+
+        // function addComment() {
+        //     alert("HI")
+        // }
+    </script>
+</body>
+</html>
