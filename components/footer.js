@@ -11,7 +11,7 @@ class Footer extends HTMLElement {
                             <h4>1234.mn</h4>
                             <ul>
                                 <li><a href="#">Бидний тухай</a></li>
-                                <li><a href="#">багшаар элсэх</a></li>
+                                <li><a href="#">Үйл ажиллагааны чиглэл</a></li>
                                 <li><a href="#">Нууцлалын бодлого</a></li>
                                 <li><a href="#">Үйлчилгээний нөхцөл</a></li>
                             </ul>
@@ -30,11 +30,11 @@ class Footer extends HTMLElement {
                             <ul>
                                 <li>
                                     <p>Утас:</p>
-                                    <a href="tel:+97680404239">+976 8040 4239</a>
+                                    <a href="tel:+97680404239">+976 99111199</a>
                                 </li>
                                 <li>
                                     <p>Мэйл:</p>
-                                    <a href="mailto:bulganerdene021@gmail.com">bulganerdene021@gmail.com</a>
+                                    <a href="mailto:orgioW1.gmail.com">orgioW1.gmail.com</a>
                                 </li>
                                 <li>
                                     <p>Хаяг:</p>
