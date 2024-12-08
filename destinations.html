@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="destinations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <header class ="home-main">
+    <header class="home-main">
         <nav class="navbar">
             <a href="./">
                 <img src="assets/advent.png" alt="Adventure Image" class="small-image">
@@ -19,6 +20,9 @@
                 <li><a href="./about.html">About us</a></li>
                 <li><a href="./destinations.html">Destinations</a></li>
                 <li><a href="./news.html">News</a></li>
+                <li><a href="./favorite.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="70" height="30">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="2"/>
+                  </svg></a></li>
             </ul>
         </nav>
         <h1>Destinations</h1>
@@ -29,240 +33,17 @@
             <i class="fa fa-search"></i>
             <input type="text" id="searchPlaces" placeholder="Search places">
         </form>
-        
-        <div class="radio-container">
-            <input type="radio" id="sort-all" name="sort" value="All" checked>
-            <label for="sort-all">All</label>
-            <input type="radio" id="sort-Lake" name="sort" value="Lake">
-            <label for="sort-Lake">Lake</label>
-            <input type="radio" id="sort-Khangai" name="sort" value="Khangai">
-            <label for="sort-Khangai">Khangai</label>
-            <input type="radio" id="sort-Gobi" name="sort" value="Gobi">
-            <label for="sort-Gobi">Gobi</label>
-            <input type="radio" id="sort-Steppe" name="sort" value="Steppe">
-            <label for="sort-Steppe">Steppe</label>
-            <input type="radio" id="price-all" name="price" value="All" >
-            <label for="price-all">All price</label>
-            <input type="radio" id="price-0-150000" name="price" value="0-150000">
-            <label for="price-0-150000">0-150000</label>
-            <input type="radio" id="price-150000-250000" name="price" value="150000-250000">
-            <label for="price-150000-250000">150000-250000</label>
-            <input type="radio" id="price-250000-350000" name="price" value="250000-350000">
-            <label for="price-250000-350000">250000-350000</label>
-            <input type="radio" id="price-350000" name="price" value="350000+">
-            <label for="price-350000">350000+</label>
-        </div>
+        <div class="radio-container" id="filterContainer"></div>
 
-        
-        <main>
-            <section class="city-grid"></section>
-    
-        </main>     
+        <section class="city-grid"></section>
     </main>
-    <hr>
+
     <footer>
-        <ul class="footer-columns">
-            <li class="column">
-                <ul class="links">
-                    <li class="ehlel"><a href="">Эхлэл</a></li>
-                    <li class="contact"><a href="">Холбоо барих</a></li>
-                    <li class="privacy"><a href="">Нууцлалын бодлого</a></li>
-                    <li class="terms"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
-                </ul>
-            </li>
-            <li class="column">
-                <ul class="links">
-                    <li class="faq"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
-                    <li class="help"><a href="">Тусламж</a></li>
-                </ul>
-            </li>
-            <li class="column">
-                <ul class="links">
-                    <li class="social"><a href="">Биднийг дагаарай</a></li>
-                        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
-                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
-                        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
-                        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+        <!-- Footer content -->
     </footer>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var radioButtons = document.querySelectorAll('input[name="sort"]');
-            var articles = document.querySelectorAll('.city-grid article');
-            var searchInput = document.getElementById('searchPlaces');
-            
-            var urlParams = new URLSearchParams(window.location.search);
-            var initialSort = urlParams.get('sort');
-            var initialSearch = urlParams.get('search');
-            
-            // Set initial sort based on URL params
-            radioButtons.forEach(function (radioButton) {
-                if (radioButton.value === initialSort) {
-                    radioButton.checked = true;
-                }
-            });
-        
-            // Function to update URL parameters
-            function updateUrlParams() {
-                var selectedSort = document.querySelector('input[name="sort"]:checked').value;
-                var url = new URL(window.location.href);
-                url.searchParams.set('sort', selectedSort);
-                url.searchParams.set('search', searchInput.value);  // Update search term in URL
-                history.pushState({}, '', url);
-            }
-        
-            // Function to filter articles by region
-            function filterArticlesByRegionAndSearch(selectedRegion) {
-                var searchTerm = searchInput.value.toLowerCase(); // Get lowercase search term
-        
-                articles.forEach(function (article) {
-                    var articleRegion = article.dataset.region;
-                    var articleTitle = article.querySelector('.title').textContent.toLowerCase(); // Assuming the title is in a .title element
-                    
-                    // Check if article matches the region and search term
-                    if ((selectedRegion === 'All' || articleRegion === selectedRegion) && 
-                        articleTitle.includes(searchTerm)) {
-                        article.style.display = 'block';
-                    } else {
-                        article.style.display = 'none';
-                    }
-                });
-            }
-        
-            // Add event listener for sorting radio buttons
-            radioButtons.forEach(function (radioButton) {
-                radioButton.addEventListener('change', function () {
-                    updateUrlParams();
-                    var selectedRegion = this.value;
-                    filterArticlesByRegionAndSearch(selectedRegion);
-                });
-            });
-        
-            // Add event listener for search input
-            searchInput.addEventListener('input', function () {
-                updateUrlParams();
-                var selectedRegion = document.querySelector('input[name="sort"]:checked').value;
-                filterArticlesByRegionAndSearch(selectedRegion);
-            });
-        
-            // Initial filtering based on selected region and search term
-            filterArticlesByRegionAndSearch(initialSort);
-        
-            // Apply search term if available in the URL
-            if (initialSearch) {
-                searchInput.value = initialSearch;
-            }
-        
-            // Trigger change event after setting initial values
-            var selectedRadioButton = document.querySelector('input[name="sort"]:checked');
-            if (selectedRadioButton) {
-                selectedRadioButton.dispatchEvent(new Event('change'));
-            }
-        });
-        </script>
-        
-    
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const cityGrid = document.querySelector('.city-grid');
-    const radioButtons = document.querySelectorAll('input[name="sort"]');
-    const priceRadioButtons = document.querySelectorAll('input[name="price"]');
-    const searchInput = document.getElementById('searchPlaces');
 
-    // Set default 'All' region and 'All' price filter to checked
-    const defaultRegionRadio = document.querySelector('input[name="sort"][value="All"]');
-    const defaultPriceRadio = document.querySelector('input[name="price"][value="All"]');
-    if (defaultRegionRadio) {
-        defaultRegionRadio.checked = true;
-    }
-    if (defaultPriceRadio) {
-        defaultPriceRadio.checked = true;
-    }
-
-    // Fetch JSON data
-    fetch('destinations.json')
-        .then(response => response.json())
-        .then(data => {
-            // Function to render articles
-            function renderArticles(filterRegion = 'All', searchTerm = '', filterPrice = 'All') {
-                cityGrid.innerHTML = ''; // Clear previous articles
-
-                // Price ranges
-                const priceRanges = {
-                    '0-150000': [0, 150000],
-                    '150000-250000': [150000, 250000],
-                    '250000-350000': [250000, 350000],
-                    '350000+': [350000, Infinity],
-                };
-
-                // Filter the data
-                const filteredData = data.filter(item => {
-                    const matchesRegion = filterRegion === 'All' || item.region === filterRegion;
-                    const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase());
-                    const matchesPrice = filterPrice === 'All' || 
-                        (item.price >= priceRanges[filterPrice][0] && item.price <= priceRanges[filterPrice][1]);
-
-                    return matchesRegion && matchesSearch && matchesPrice;
-                });
-
-                // Render filtered data
-                filteredData.forEach(item => {
-                    const article = document.createElement('article');
-                    article.setAttribute('data-region', item.region);
-
-                    const stars = '★'.repeat(item.rating) + '☆'.repeat(5 - item.rating);
-
-                    article.innerHTML = ` 
-                        <div class="flip-card">
-                            <div class="flip-card-front">
-                                <img src="${item.image}" alt="${item.name}">
-                                <h4>${item.name}</h4>
-                                <div class="rating" title="${item.rating} out of 5 stars">
-                                    <span class="stars">${stars}</span>
-                                </div>
-                                <p>Price: <span class="price">${item.price}</span></p>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4>${item.name}</h4>
-                                <p>${item.description}</p>
-                                <p>Region: ${item.region}</p>
-                                <a href="${item.link}" class="learn-more">Learn More</a>
-                            </div>
-                        </div>
-                    `;
-                    cityGrid.appendChild(article);
-                });
-            }
-
-            // Initial render with default filters
-            renderArticles('All', '', 'All');
-
-            // Add event listeners for filters
-            radioButtons.forEach(button => {
-                button.addEventListener('change', () => {
-                    renderArticles(button.value, searchInput.value, document.querySelector('input[name="price"]:checked').value);
-                });
-            });
-
-            priceRadioButtons.forEach(button => {
-                button.addEventListener('change', () => {
-                    renderArticles(document.querySelector('input[name="sort"]:checked').value, searchInput.value, button.value);
-                });
-            });
-
-            searchInput.addEventListener('input', () => {
-                renderArticles(document.querySelector('input[name="sort"]:checked').value, searchInput.value, document.querySelector('input[name="price"]:checked').value);
-            });
-        })
-        .catch(error => console.error('Error fetching data:', error));
-});
-
-                    </script>
-            
+    <script type="module" src="js/destination.js"></script>
     
 </body>
+
 </html>

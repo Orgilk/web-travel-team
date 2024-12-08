@@ -317,7 +317,19 @@ main {
             margin: 2% 10%;
         }
     }
-    
+    .box {
+        position: relative;
+        width: 300px; /* Example width */
+        height: 300px; /* Example height */
+        background-color: lightgray; /* Example background */
+      }
+      
+      svg {
+        position: absolute;
+        bottom: 10px; /* Distance from the bottom */
+        right: 10px;  /* Distance from the right */
+      }
+      
     .pagination {
         text-align: center;
         margin-top: 5%;

@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const tripRoutes = require('./route/travelRoute');
-const orderRoutes = require('./route/orderRoute'); // Create this route file
+const orderRoutes = require('./route/orderRoute');
+const destinationRoutes = require('./route/destinationRoute');
 // require('dotenv').config(); // Load environment variables
 
 const app = express();
@@ -16,7 +17,8 @@ app.use(express.json()); // Replaces body-parser
 
 // Routes
 app.use('/api/trips', tripRoutes);
-app.use('/api/orders', orderRoutes); // Separate routes for orders
+app.use('/api/orders', orderRoutes);
+app.use('/api/destinations', destinationRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;

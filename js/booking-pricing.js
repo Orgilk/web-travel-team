@@ -68,17 +68,34 @@ function processBooking() {
         meal: document.querySelector('.option-card[data-type="meal"].selected')?.textContent.trim() || "",
         transport: document.querySelector('.option-card[data-type="transport"].selected')?.textContent.trim() || "",
         adults: peopleCount.adults || 0,
-        children: peopleCount.children == 0.5 ? 1 : 0 || 0,
+        children: peopleCount.children == 0.5 ? 1 : peopleCount.children || 0,
         sumPrice,
-        totalPrice
+        totalPrice,
+        destination: "city"
     };
-
+    console.log("bookingDe: ", bookingDetails)
     bookingList.push(bookingDetails);
 
+    fetch('http://localhost:5000/api/trips', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(bookingDetails)  // Convert the bookingDetails object to JSON format
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Trip added:', data);
+            alert('Your booking has been successfully added!');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while saving the booking.');
+        });
     // Save the updated bookingList to localStorage
     localStorage.setItem('bookingList', JSON.stringify(bookingList));
     updateCartCount();
 
-    
+
     // window.location.href = 'payment.html';
 }

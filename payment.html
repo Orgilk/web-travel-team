@@ -115,6 +115,19 @@
             font-size: 1rem;
             text-align: center;
         }
+
+        .delete-button {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-button:hover {
+            background-color: darkred;
+        }
     </style>
 </head>
 
@@ -161,6 +174,7 @@
                     </div>
                     <p><strong>Нийт хүн:</strong> Насанд хүрэгчид: <span id="adults-count-${index}">${booking.adults}</span>, Хүүхэд: <span id="children-count-${index}">${booking.children}</span></p>
                     <p><strong>Нийт үнэ:</strong> <span id="total-price-${index}">${booking.totalPrice.toLocaleString()}</span>₮</p>
+                    <button class="delete-button" onclick="deleteBooking(${index})">Устгах</button>
                 `;
                 bookingListContainer.appendChild(bookingElement);
             });
@@ -191,11 +205,55 @@
 
         // Function to calculate the total price
         function calculateTotalPrice(booking) {
-            const totalPrice = (booking.adults * booking.sumPrice) + (booking.children/2 * booking.sumPrice);
+            const totalPrice = (booking.adults * booking.sumPrice) + (booking.children / 2 * booking.sumPrice);
             booking.totalPrice = totalPrice;
 
             return totalPrice;
         }
+        // Function to delete a booking
+        async function deleteBooking(index) {
+            const bookingList = JSON.parse(localStorage.getItem('bookingList')) || [];
+
+            // Get the trip ID from the booking
+            const tripId = bookingList[index]?.id || 5; // Ensure that each booking has an "id" field (or replace with your unique identifier)
+
+            if (!tripId) {
+                alert('Trip ID not found for deletion.');
+                return;
+            }
+
+            try {
+                // Send a DELETE request to the backend API
+                const response = await fetch('http://localhost:5000/api/trips', {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ trip_id: tripId }) // Send the trip_id to the backend
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Remove the booking from the list if the API call was successful
+                    bookingList.splice(index, 1);
+
+                    // Save the updated list back to localStorage
+                    localStorage.setItem('bookingList', JSON.stringify(bookingList));
+
+                    // Reload the page to reflect changes
+                    window.location.reload();
+
+                    alert('Trip deleted successfully!');
+                } else {
+                    alert('Error deleting trip: ' + data.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while deleting the trip.');
+            }
+        }
+
 
         // Function to handle the payment process (mocked)
         function processPayment() {
