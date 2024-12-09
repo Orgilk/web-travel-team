@@ -1,8 +1,8 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #2D3748;
-    background-color: #F7FAFC;
+    color: #292525;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -16,8 +16,8 @@ body {
     justify-content: flex-end;
     align-items: center;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: rgba(211, 209, 209, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
@@ -28,7 +28,7 @@ body {
 }
 
 .nav-links a {
-    color: #2D3748;
+    color: #2f343e;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -40,7 +40,7 @@ body {
 
 .hero-section {
     height: 60vh;
-    background-image: url('assets/about-hero.jpg');
+    background-image: url('assets/aboutus.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,7 +89,7 @@ body {
 }
 
 .about-card {
-    background: white;
+    background: rgb(219, 219, 219);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -116,7 +116,7 @@ body {
 }
 
 .stats-section {
-    background-color: #EDF2F7;
+    background-color: #dcdfe3;
     padding: 4rem 2rem;
 }
 
@@ -135,12 +135,10 @@ body {
 
 .stat-item h2 {
     font-size: 2.5rem;
-    color: #2C5282;
+    color: #000000;
 }
 
-.stat-item p {
-    color: #4A5568;
-}
+
 
 .team-section {
     padding: 4rem 2rem;
@@ -162,11 +160,11 @@ body {
 }
 
 .team-member {
-    background: white;
+    background: rgb(213, 210, 210);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    padding: 6rem;
     text-align: center;
 }
 
@@ -189,8 +187,8 @@ body {
 }
 
 .footer {
-    background-color: #1A365D;
-    color: white;
+    background-color: #d4d5d6;
+    color: rgb(6, 5, 5);
     padding: 3rem 0 1rem 0;
     margin-top: 4rem;
 }
@@ -207,7 +205,7 @@ body {
 .footer-section h3 {
     margin-bottom: 1rem;
     font-size: 1.2rem;
-    color: #4299E1;
+    color: #0d0d0d;
 }
 
 .footer-section ul {
@@ -220,13 +218,13 @@ body {
 }
 
 .footer-section a {
-    color: #E2E8F0;
+    color: #1f1f20;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: #4299E1;
+    color: #d4d5d5;
 }
 
 .social-links {
