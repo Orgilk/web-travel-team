@@ -1,0 +1,66 @@
+{
+    "radioContainer": [
+      {
+        "id": "sort-all",
+        "name": "sort",
+        "value": "All",
+        "checked": true,
+        "label": "All"
+      },
+      {
+        "id": "sort-Lake",
+        "name": "sort",
+        "value": "Lake",
+        "label": "Lake"
+      },
+      {
+        "id": "sort-Khangai",
+        "name": "sort",
+        "value": "Khangai",
+        "label": "Khangai"
+      },
+      {
+        "id": "sort-Gobi",
+        "name": "sort",
+        "value": "Gobi",
+        "label": "Gobi"
+      },
+      {
+        "id": "sort-Steppe",
+        "name": "sort",
+        "value": "Steppe",
+        "label": "Steppe"
+      },
+      {
+        "id": "price-all",
+        "name": "price",
+        "value": "All",
+        "label": "All price"
+      },
+      {
+        "id": "price-0-150000",
+        "name": "price",
+        "value": "0-150000",
+        "label": "0-150000"
+      },
+      {
+        "id": "price-150000-250000",
+        "name": "price",
+        "value": "150000-250000",
+        "label": "150000-250000"
+      },
+      {
+        "id": "price-250000-350000",
+        "name": "price",
+        "value": "250000-350000",
+        "label": "250000-350000"
+      },
+      {
+        "id": "price-350000",
+        "name": "price",
+        "value": "350000+",
+        "label": "350000+"
+      }
+    ]
+  }
+  

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Adventure</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
+    <script src="./js/script.js" defer></script>
     <header id="hero-section" class="home-main" data-bg-images="assets/back.jpg,assets/back1.jpeg,assets/back2.jpeg">
         <nav class="navbar">
             <a href="./">
@@ -24,7 +27,7 @@
         </nav>
         <h1>Discover beautiful places</h1>
     </header>
-    
+
     <main>
         <section class="statistics">
             <div class="stat-container">
@@ -65,7 +68,7 @@
                     </div>
                 </article>
             </div>
-        </section>     
+        </section>
         <section class="destination-grid">
             <article class="dhuvsgul">
                 <a href="huvsgul.html">
@@ -93,87 +96,115 @@
                         <span class="stars">★★★★☆</span>
                     </div>
                 </a>
-            </article> 
+            </article>
             <div class="button-container">
-                
-                
+
+
                 <button class="button" onclick="window.location.href='destinations.html'">View all destination</button>
                 <div class="destination-section">
-                    
-                    
+
+
+                </div>
+                <!-- ... existing code ... -->
+
+
+
+        </section>
+        <section class="carousel">
+            <div class="carousel_inner carousel__fade">
+                <article class="carousel_item carousel_item__active">
+                    <img src="./assets/back.jpg" alt="" class="carousel_img" draggable="false">
+                    <div class="carousel_caption-1">
+                        <h1>Сурахад хязгаар үгүй боллоо</h1>
+                        <p>Ганцхан удаагийн худалдан авалтаар насан туршийн мэдлэгээ бүтээгээрэй. Эцэс төгсгөлгүй
+                            суралцах аяллаа одоогоос эхлүүл!</p>
+                    </div>
+                </article>
+                <article class="carousel_item">
+                    <img src="./assets/back1.jpeg" alt="" class="carousel_img drag" draggable="false">
+                    <div class="carousel_caption-2">
+                        <h1>Боловсролын шилдэг мэргэжилтнүүд</h1>
+                        <p>Манай сургалтуудыг шилдэг их дээд сургуулиудад багшилдаг, олон жилийн арвин туршлагатай
+                            онцгой багш нар зааж байна.</p>
+                    </div>
+                </article>
+                <article class="carousel_item">
+                    <img src="./assets/back2.jpeg" alt="" class="carousel_img" draggable="false">
+                    <div class="carousel_caption-3">
+                        <h1>НАСАН ТУРШИЙН БАТАЛГААГ ЗӨВХӨН ТАНД</h1>
+                        <p>Бид таны амжилтад чин сэтгэлээсээ хандан, олж авсан мэдлэг бүрийг тань батлах сертификат
+                            олгох болно.</p>
+                    </div>
+                </article>
             </div>
-            <!-- ... existing code ... -->
-            
-            
-            
-        </section>  
-         
+        </section>
     </main>
     <hr>
     <footer class="footer">
         <div class="container">
             <div class="background"></div>
             <div class="content">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>1234.mn</h4>
-                    <ul>
-                        <li><a href="#">Бидний тухай</a></li>
-                        <li><a href="#">багшаар элсэх</a></li>
-                        <li><a href="#">Нууцлалын бодлого</a></li>
-                        <li><a href="#">Үйлчилгээний нөхцөл</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Тусламж</h4>
-                    <ul>
-                        <li><a href="#">Түгээмэл асуулт</a></li>
-                        <li><a href="#">Төлбөрийн нөхцөл</a></li>
-                        <li><a href="#">Тусламж үйлчилгээ</a></li>
-                        <li><a href="#">Оператортой холбогдох</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Холбоо барих</h4>
-                    <ul>
-                        <li>
-                            <p>Утас:</p>
-                            <a href="tel:+97680404239">+976 8040 4239</a>
-                        </li>
-                        <li>
-                            <p>Мэйл:</p>
-                            <a href="mailto:bulganerdene021@gmail.com">bulganerdene021@gmail.com</a>
-                        </li>
-                        <li>
-                            <p>Хаяг:</p>
-                            <a href="#">Монгол Улсын Их Сургууль
-                                Их сургуулийн гудамж - 1, бага тойруу , Сүхбаатар дүүрэг, Улаанбаатар хот</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Цахим хуудас</h4>
-                    <div class="social-links">
-                        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
-                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
-                        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
-                        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>1234.mn</h4>
+                        <ul>
+                            <li><a href="#">Бидний тухай</a></li>
+                            <li><a href="#">багшаар элсэх</a></li>
+                            <li><a href="#">Нууцлалын бодлого</a></li>
+                            <li><a href="#">Үйлчилгээний нөхцөл</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Тусламж</h4>
+                        <ul>
+                            <li><a href="#">Түгээмэл асуулт</a></li>
+                            <li><a href="#">Төлбөрийн нөхцөл</a></li>
+                            <li><a href="#">Тусламж үйлчилгээ</a></li>
+                            <li><a href="#">Оператортой холбогдох</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Холбоо барих</h4>
+                        <ul>
+                            <li>
+                                <p>Утас:</p>
+                                <a href="tel:+97680404239">+976 8040 4239</a>
+                            </li>
+                            <li>
+                                <p>Мэйл:</p>
+                                <a href="mailto:bulganerdene021@gmail.com">bulganerdene021@gmail.com</a>
+                            </li>
+                            <li>
+                                <p>Хаяг:</p>
+                                <a href="#" style="font-size: small;">Монгол Улсын Их Сургууль
+                                    Их сургуулийн гудамж - 1, бага тойруу , Сүхбаатар дүүрэг, Улаанбаатар хот</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Цахим хуудас</h4>
+                        <div class="social-links">
+                            <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                            <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                            <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                            <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-   </footer>
-        
-      
+    </footer>
+
+
     <script src="main.js"></script>
     <script>
-        window.addEventListener("scroll", function(){
-    var header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 500);
-})
-    
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 500);
+        })
 
-</script>
+
+    </script>
 </body>
+
 </html>

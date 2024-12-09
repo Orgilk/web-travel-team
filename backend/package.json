@@ -1,0 +1,28 @@
+{
+    "name": "trip-backend",
+    "version": "1.0.0",
+    "description": "A backend for managing trip options with PostgreSQL and CORS",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "postgresql",
+        "cors",
+        "backend"
+    ],
+    "author": "Orgil",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "pg": "^8.13.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}

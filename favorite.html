@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .table th,
+        .table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #f4f4f4;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .payment-button {
+            display: block;
+            width: 200px;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .payment-button:hover {
+            background-color: black;
+        }
+
+        .back-button {
+            display: block;
+            width: 200px;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            margin-left: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #0069d9;
+        }
+
+        .booking-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-item p {
+            margin: 5px 0;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .input-group label {
+            font-size: 1rem;
+        }
+
+        .input-group input {
+            width: 50px;
+            padding: 5px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .delete-button {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Favorite Destinations</h1>
+
+        <!-- Booking list section -->
+        <div id="favorites-list"></div>
+
+        <!-- <div class="button-container">
+            <button class="payment-button" onclick="processPayment()">Баталгаажуулах</button>
+            <button class="back-button" onclick="window.history.back()">Буцах</button>
+        </div> -->
+    </div>
+
+    <script>
+        window.onload = function () {
+            // Retrieve the favorite destinations from localStorage
+            const favoriteDestinations = JSON.parse(localStorage.getItem('favorites')) || [];
+
+            // If there are no favorites, display a message
+            if (favoriteDestinations.length === 0) {
+                document.getElementById('favorites-list').innerHTML = '<p>Таны дуртай газрууд байхгүй байна.</p>';
+                return;
+            }
+
+            // Display each favorite destination
+            const favoritesListContainer = document.getElementById('favorites-list');
+            favoriteDestinations.forEach((destination, index) => {
+                const destinationElement = document.createElement('div');
+                destinationElement.classList.add('booking-item');
+                destinationElement.innerHTML = `
+                    <h3>${destination.name}</h3>
+                    <img src="${destination.image}" alt="${destination.name}" style="height:300px; width:100%;">
+                    <p><strong>Тайлбар:</strong> ${destination.description}</p>
+                    <p><strong>Хаана:</strong> ${destination.region}</p>
+                    <p><strong>Үнэ:</strong> ${destination.price.toLocaleString()}₮</p>
+                    <div class="input-group">
+                        <button class="delete-button" onclick="removeFromFavorites(${index})">Устгах</button>
+                    </div>
+                `;
+                favoritesListContainer.appendChild(destinationElement);
+            });
+        };
+
+        // Function to remove a destination from the favorites list
+        function removeFromFavorites(index) {
+            const favoriteDestinations = JSON.parse(localStorage.getItem('favorites')) || [];
+            favoriteDestinations.splice(index, 1); // Remove the destination at the given index
+
+            // Save the updated list back to localStorage
+            localStorage.setItem('favorites', JSON.stringify(favoriteDestinations));
+
+            // Reload the page to reflect changes
+            window.location.reload();
+        }
+
+        // Function to handle the payment process (mocked)
+        function processPayment() {
+            alert("Төлбөр амжилттай хийгдлээ!");
+        }
+    </script>
+</body>
+
+</html>
