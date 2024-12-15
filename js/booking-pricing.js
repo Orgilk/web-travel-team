@@ -1,9 +1,31 @@
 let selectedOptions = { duration: 0, hotel: 0, meal: 0, transport: 0 };
 let peopleCount = { adults: 0, children: 0 };
-function updateCartCount() {
-    const bookingList = JSON.parse(localStorage.getItem('bookingList')) || [];
-    const cartItemCountElement = document.getElementById('cartItemCount');
-    cartItemCountElement.textContent = bookingList.length;
+// // function updateCartCount() {
+//     const bookingList = JSON.parse(localStorage.getItem('bookingList')) || [];
+//     const cartItemCountElement = document.getElementById('cartItemCount');
+//     cartItemCountElement.textContent = bookingList.length;
+// }
+async function updateCartCount() {
+    try {
+        const response = await fetch('http://localhost:5000/api/trips', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status} ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        // Update the cart item count
+        const cartItemCountElement = document.getElementById('cartItemCount');
+        cartItemCountElement.textContent = data.length;
+
+    } catch (error) {
+        console.error('API call failed:', error.message);
+    }
 }
 // Handle option card selections
 document.querySelectorAll('.option-card').forEach(card => {
@@ -87,6 +109,7 @@ function processBooking() {
         .then(data => {
             console.log('Trip added:', data);
             alert('Your booking has been successfully added!');
+            updateCartCount();
         })
         .catch(error => {
             console.error('Error:', error);
