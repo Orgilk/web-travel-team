@@ -74,7 +74,7 @@ const fetchDestinations = async (filterRating = 'All', searchName = '') => {
     console.log("filterrating: ", filterRating)
     try {
         // Construct the URL with query parameters
-        const url = new URL('http://localhost:5000/api/destinations');
+        const url = new URL('http://localhost:5005/api/destinations');
         if (filterRating !== 'All') {
             url.searchParams.append('rating', filterRating);
         }
