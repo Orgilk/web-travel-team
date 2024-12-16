@@ -1,0 +1,15 @@
+{
+  "name": "web-travel-team",
+  "version": "1.0.0",
+  "description": "<img src=\"assets/advent.png\" alt=\"logo\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
