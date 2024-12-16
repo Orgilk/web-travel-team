@@ -13,13 +13,33 @@ const getTrips = async (req, res) => {
 
 const getDestinations = async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM destinations');
+        const { rating, name } = req.query;
+
+        let query = 'SELECT * FROM destinations';
+        const queryParams = [];
+
+        // Add WHERE clause for rating
+        if (rating) {
+            queryParams.push(rating);
+            query += ` WHERE rating >= $${queryParams.length}`;
+        }
+
+        // Add WHERE clause for name
+        if (name) {
+            queryParams.push(`%${name}%`);
+            query += queryParams.length === 1 
+                ? ` WHERE name ILIKE $${queryParams.length}`
+                : ` AND name ILIKE $${queryParams.length}`;
+        }
+
+        const result = await pool.query(query, queryParams);
         res.json(result.rows);
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Server Error');
     }
 };
+
 
 // Add a new trip
 const addTrip = async (req, res) => {

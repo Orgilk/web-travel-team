@@ -40,11 +40,31 @@ class Header extends HTMLElement {
         this.updateCartCount();
     }
 
-    updateCartCount() {
-        const bookingList = JSON.parse(localStorage.getItem('bookingList')) || [];
-        const cartItemCountElement = this.querySelector('#cartItemCount');
-        if (cartItemCountElement) {
-            cartItemCountElement.textContent = bookingList.length;
+    // Move the fetchData function outside and make it part of the class.
+    async updateCartCount() {
+        try {
+            const response = await fetch('http://localhost:5000/api/trips', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} ${response.statusText}`);
+            }
+
+            const data = await response.json();
+
+            // Update the cart item count
+            const cartItemCountElement = this.querySelector('#cartItemCount');
+            if (cartItemCountElement) {
+                cartItemCountElement.textContent = data.length; // Display the number of items in the cart
+            }
+
+            console.log("data: ", data);
+        } catch (error) {
+            console.error('API call failed:', error.message);
         }
     }
 }

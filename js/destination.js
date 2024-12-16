@@ -27,34 +27,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Attach event listeners after radio buttons are created
             const radioButtons = document.querySelectorAll('input[name="sort"], input[name="price"]');
-            const searchInput = document.getElementById('searchPlaces');
+            const searchNameInput = document.getElementById('searchName');
+            const searchPlacesInput = document.getElementById('searchPlaces');
+
+            searchNameInput.addEventListener('input', async () => {
+                const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || 'All';
+                const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || 'All';
+                const selectedRating = document.getElementById('ratingFilter').value || 'All';
+                await renderArticles(selectedRegion, searchNameInput.value, searchPlacesInput.value, selectedPrice, selectedRating);
+            });
+            
+            searchPlacesInput.addEventListener('input', async () => {
+                const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || 'All';
+                const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || 'All';
+                const selectedRating = document.getElementById('ratingFilter').value || 'All';
+                await renderArticles(selectedRegion, searchNameInput.value, searchPlacesInput.value, selectedPrice, selectedRating);
+            });
 
             radioButtons.forEach(button => {
                 button.addEventListener('change', async () => {
                     const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || 'All';
                     const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || 'All';
-                    await renderArticles(selectedRegion, searchInput.value, selectedPrice);
+                    const selectedRating = document.getElementById('ratingFilter').value || 'All';
+                    await renderArticles(selectedRegion, searchNameInput.value, searchPlacesInput.value, selectedPrice, selectedRating);
                 });
             });
 
-            searchInput.addEventListener('input', async () => {
+            // Rating filter listener
+            document.getElementById('ratingFilter').addEventListener('change', async () => {
                 const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || 'All';
                 const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || 'All';
-                await renderArticles(selectedRegion, searchInput.value, selectedPrice);
+                const selectedRating = document.getElementById('ratingFilter').value || 'All';
+                await renderArticles(selectedRegion, '', '', selectedPrice, selectedRating);
             });
 
             // Initial render with default filters
             const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || 'All';
             const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || 'All';
-            renderArticles(selectedRegion, '', selectedPrice);
+            const selectedRating = document.getElementById('ratingFilter').value || 'All';
+            renderArticles(selectedRegion, '', '', selectedPrice, selectedRating);
         })
         .catch(error => console.error("Error loading filters:", error));
 });
 
-const fetchDestinations = async () => {
+const fetchDestinations = async (filterRating = 'All', searchName = '') => {
+    console.log("filterrating: ", filterRating)
     try {
-        const response = await fetch('http://localhost:5000/api/destinations');
+        // Construct the URL with query parameters
+        const url = new URL('http://localhost:5000/api/destinations');
+        if (filterRating !== 'All') {
+            url.searchParams.append('rating', filterRating);
+        }
+        if (searchName) {
+            url.searchParams.append('name', searchName);
+        }
+
+        // Make the request
+        const response = await fetch(url.toString());
         if (!response.ok) throw new Error('Failed to fetch destinations');
+
         return await response.json();
     } catch (error) {
         console.error(error);
@@ -71,19 +102,21 @@ const getPriceRange = (priceRange) => {
     };
     return priceRanges[priceRange] || [0, Infinity];
 };
-
-const renderArticles = async (filterRegion = 'All', searchTerm = '', filterPrice = 'All') => {
+const renderArticles = async (filterRegion = 'All', searchName = '', searchPlaces = '', filterPrice = 'All', filterRating = 'All') => {
     const cityGrid = document.querySelector('.city-grid');
     cityGrid.innerHTML = ''; // Clear grid
 
-    const data = await fetchDestinations(); // Fetch data from API
+    // Fetch destinations data
+    const data = await fetchDestinations(filterRating, searchPlaces);
+
     const [minPrice, maxPrice] = getPriceRange(filterPrice); // Get price range for filtering
 
     const filteredData = data.filter(item => {
         const matchesRegion = filterRegion === 'All' || item.region === filterRegion;
-        const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesName = searchName === 'All' || item.name.toLowerCase().includes(searchName.toLowerCase());
         const matchesPrice = filterPrice === 'All' || (item.price >= minPrice && item.price <= maxPrice);
-        return matchesRegion && matchesSearch && matchesPrice;
+        const matchesRating = filterRating === 'All' || item.rating >= parseInt(filterRating); // Compare with the rating
+        return matchesRegion && matchesPrice && matchesName && matchesRating;
     });
 
     filteredData.forEach(item => {
