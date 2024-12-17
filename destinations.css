@@ -172,13 +172,35 @@ main {
     }
 
     .search-places {
-        margin: 5% 25%;
-
-        & i,
-        input {
-            margin: 5px;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Хоорондын зайг багасгах */
+        margin: 2% auto; /* Дээд, доод зайг шахах */
     }
+    
+    .search-places input {
+        width: 250px; /* Оролтын өргөнийг тохируулах */
+        padding: 5px 10px; /* Дотор зайг багасгах */
+        font-size: 14px; /* Үсгийн хэмжээг багасгах */
+        border: 1px solid #ccc; /* Хүрээ нэмэх */
+        border-radius: 5px; /* Буланг зөөлрүүлэх */
+    }
+    
+    .search-places button {
+        padding: 5px 15px; /* Товчлуурын дотор зайг багасгах */
+        font-size: 14px;
+        background-color: #4caf50; /* Ногоон товчлуур */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .search-places button:hover {
+        background-color: #45a049; /* Хулгана ороход өнгийг өөрчлөх */
+    }
+    
 
     .radio-container {
         display: flex;
