@@ -7,7 +7,6 @@ const reviewsGrid = document.querySelector('.reviews-grid');
 // Load comments from localStorage
 function loadComments() {
     const comments = JSON.parse(localStorage.getItem('comments')) || [];
-    console.log('Loaded comments:', comments); // Verify the comments are loaded
     comments.forEach(comment => addCommentToGrid(comment.name, comment.text));
 }
 
@@ -43,7 +42,6 @@ function addCommentToGrid(name, text) {
 
     reviewsGrid.appendChild(newReview);
 }
-
 
 // Handle form submission
 commentForm.addEventListener('submit', (e) => {

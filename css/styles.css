@@ -126,56 +126,6 @@ header.sticky .cart img{
 .small-image {
 height: 80px;
 }
-/* .hero-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 2rem;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    animation: slide-bg 0.5s ease-in-out;
-} */
-/* .hero-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 2rem;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    z-index: -1;
-}
-
-.hero-section h1,
-.hero-section .cta-button {
-    position: relative;
-    z-index: 1;
-} */
- 
 
 #hero-section {
     transition: background-image 0.5s ease-in-out;
@@ -183,6 +133,9 @@ height: 80px;
 
 #hero-section.animate-bg {
     opacity: 0.9; /* Subtle effect */
+}
+.animate-bg {
+    transition: background-image 0.5s ease-in-out;
 }
 
 .home-main {
@@ -714,6 +667,9 @@ display: none;
     color: var(--primary-color);
 }
 
+.input-number {
+    height: 25px;
+}
 .booking-button {
     background-color: var(--accent-color);
     color: white;
