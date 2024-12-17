@@ -7,6 +7,9 @@ class HeroSection extends HTMLElement {
 
     connectedCallback() {
         // Add HTML structure inside the custom element
+        const styleLink = document.createElement('link');
+        styleLink.setAttribute('rel', 'stylesheet');
+        styleLink.setAttribute('href', './css/styles.css');
         this.innerHTML = `
              <header id="hero-section" class="home-main" data-bg-images="assets/back.jpg,assets/back1.jpeg,assets/back2.jpeg"> <section class="destination-overview">
                 <h1 style="font-size: 60px;color: white;">Хөвсгөл Нуур</h1>

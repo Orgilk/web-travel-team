@@ -10,6 +10,8 @@ class BookingSection extends HTMLElement {
         this.render();
         this.attachEventListeners();
         this.loadOptionsData();
+
+        this.addEventListeners();
     }
 
     get jsonData() {
@@ -19,10 +21,49 @@ class BookingSection extends HTMLElement {
                     "direction": "city",
                     "bookingSections": [
                         {
-                            "title": "📅 Аяллын Хугацаа",
+                            "title": "📅 Аяллын Хугацаа -city",
                             "id": "duration",
                             "options": [
-                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 150000 },
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000 }
+                            ]
+                        },
+                        {
+                            "title": "🏨 Байрны Сонголт",
+                            "id": "hotel",
+                            "options": [
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000 },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000 },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000 }
+                            ]
+                        },
+                        {
+                            "title": "🍽️ Хоолны Сонголт",
+                            "id": "meal",
+                            "options": [
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000 },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000 }
+                            ]
+                        },
+                        {
+                            "title": "🚌 Тээврийн Хэрэгсэл",
+                            "id": "transport",
+                            "options": [
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000 },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000 }
+                            ]
+                        }
+                    ],
+                    "map": ""
+                },
+                {
+                    "direction": "huvsgul1",
+                    "bookingSections": [
+                        {
+                            "title": "📅 Аяллын Хугацаа huvsgul",
+                            "id": "duration",
+                            "options": [
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000 },
                                 { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000 }
                             ]
                         },
@@ -116,11 +157,17 @@ class BookingSection extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="./css/styles.css">
-            
+              <style>
+                .option-card { cursor: pointer; }
+                .booking-selection { display: none; }
+            </style>
             <section class="package-details">
                 <div class="package-columns">
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2213678.5450399895!2d100.74254077752268!3d51.30968531930048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d0e5d1ba6b92eab%3A0xd9305b7b011f9111!2sKhuvsgul%20Lake!5e0!3m2!1sen!2smn!4v1732012981500!5m2!1sen!2smn"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     
                     <!-- Booking Sections -->
@@ -164,6 +211,7 @@ class BookingSection extends HTMLElement {
                             <div class="booking-selection" style="display: none;">
                                 ${option.images ? option.images.map(image => `<img src="${image}" alt="option image" class="booking image">`).join('') : ''}
                             </div>
+                            
                         </div>
                     `).join('')}
                 </div>
@@ -202,6 +250,41 @@ class BookingSection extends HTMLElement {
         this.calculateTotalPrice();
     }
 
+    addEventListeners() {
+        // Select the option card and toggle visibility of .booking-selection
+        const card = this.shadowRoot.querySelector('.option-card');
+        const imgSection = this.shadowRoot.querySelector('.booking-selection');
+        if (card && imgSection) {
+            card.addEventListener('click', () => {
+                const isVisible = imgSection.style.display === 'block';
+                imgSection.style.display = isVisible ? 'none' : 'block';
+            });
+        }
+    }
+
+    async updateCartCount() {
+        try {
+            const response = await fetch('http://localhost:5005/api/trips', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            // Update the cart item count
+            const cartItemCountElement = document.getElementById('cartItemCount');
+            cartItemCountElement.textContent = data.length;
+
+        } catch (error) {
+            console.error('API call failed:', error.message);
+        }
+    }
+
     updatePeopleCount() {
         const adultCount = Math.max(parseInt(this.shadowRoot.getElementById('adult-count').value) || 0, 0);
         const childCount = Math.max(parseInt(this.shadowRoot.getElementById('child-count').value) || 0, 0);
@@ -219,6 +302,8 @@ class BookingSection extends HTMLElement {
 
         this.shadowRoot.getElementById('totalPrice').textContent = `Нийт үнэ: ${totalPrice.toLocaleString()}₮`;
     }
+
+
 
     processBooking() {
         let bookingList = JSON.parse(localStorage.getItem('bookingList')) || [];
@@ -243,8 +328,29 @@ class BookingSection extends HTMLElement {
         bookingList.push(bookingDetails);
         localStorage.setItem('bookingList', JSON.stringify(bookingList));
         alert('Захиалга амжилттай!');
-        window.location.href = '/order-summary';
+        fetch('http://localhost:5005/api/trips', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(bookingDetails)  // Convert the bookingDetails object to JSON format
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Trip added:', data);
+                alert('Your booking has been successfully added!');
+                this.updateCartCount();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while saving the booking.');
+            });
+        // Save the updated bookingList to localStorage
+        localStorage.setItem('bookingList', JSON.stringify(bookingList));
+        this.updateCartCount();
+        // window.location.href = '/order-summary';
     }
+
 }
 
 customElements.define('booking-section', BookingSection);

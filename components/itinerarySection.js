@@ -24,7 +24,7 @@ class ItinerarySection extends HTMLElement {
     loadStyles() {
         const link = document.createElement('link');
         link.setAttribute('rel', 'stylesheet');
-        link.setAttribute('href', '../css/styles.css'); // Path to your CSS file
+        link.setAttribute('href', './css/styles.css'); // Path to your CSS file
         this.shadowRoot.appendChild(link);
     }
 

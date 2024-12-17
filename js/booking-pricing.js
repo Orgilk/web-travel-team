@@ -7,7 +7,7 @@ let peopleCount = { adults: 0, children: 0 };
 // }
 async function updateCartCount() {
     try {
-        const response = await fetch('http://localhost:5000/api/trips', {
+        const response = await fetch('http://localhost:5005/api/trips', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ function processBooking() {
     console.log("bookingDe: ", bookingDetails)
     bookingList.push(bookingDetails);
 
-    fetch('http://localhost:5000/api/trips', {
+    fetch('http://localhost:5005/api/trips', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

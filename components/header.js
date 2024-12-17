@@ -43,7 +43,7 @@ class Header extends HTMLElement {
     // Move the fetchData function outside and make it part of the class.
     async updateCartCount() {
         try {
-            const response = await fetch('http://localhost:5000/api/trips', {
+            const response = await fetch('http://localhost:5005/api/trips', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

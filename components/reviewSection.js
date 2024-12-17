@@ -15,7 +15,9 @@ class ReviewsSection extends HTMLElement {
                         <textarea id="comment-box" rows="4" placeholder="Сэтгэгдэлээ энд бичнэ үү..." required></textarea>
                         <button type="submit">Илгээх</button>
                     </form>
-                    <div id="comment-error">Нэр болон сэтгэгдэл бичих шаардлагатай!</div>
+                    <div id="comment-error" style="display: none; color: red;">
+                        Нэр болон сэтгэгдэл бичих шаардлагатай!
+                    </div>
                 </div>
             </section>
         `;
@@ -26,6 +28,33 @@ class ReviewsSection extends HTMLElement {
     loadComments(reviewsGrid) {
         const comments = JSON.parse(localStorage.getItem('comments')) || [];
         comments.forEach(comment => this.addCommentToGrid(comment.name, comment.text));
+    }
+
+    // Add a comment to the grid
+    addCommentToGrid(name, text) {
+        const reviewsGrid = this.querySelector('.reviews-grid');
+        const newReview = document.createElement('div');
+        newReview.classList.add('review-card');
+        newReview.innerHTML = `
+            <p>"${text}"</p>
+            <p class="reviewer new">- ${name}</p>
+            <button class="remove-btn" style="background-color: orange; color: white; border: none; padding: 0.5rem; cursor: pointer; border-radius: 4px;">Устгах</button>
+        `;
+
+        // Remove button functionality
+        const removeBtn = newReview.querySelector('.remove-btn');
+        removeBtn.addEventListener('click', () => {
+            reviewsGrid.removeChild(newReview);
+            this.removeComment(name, text);
+        });
+        reviewsGrid.appendChild(newReview);
+    }
+
+    // Remove a comment from localStorage
+    removeComment(name, text) {
+        const comments = JSON.parse(localStorage.getItem('comments')) || [];
+        const updatedComments = comments.filter(comment => comment.name !== name || comment.text !== text);
+        localStorage.setItem('comments', JSON.stringify(updatedComments));
     }
 
     init() {
@@ -46,48 +75,21 @@ class ReviewsSection extends HTMLElement {
             console.log('Comments saved: ', comments); // Debugging line
         };
 
-        // Remove a comment from localStorage
-        const removeComment = (name, text) => {
-            const comments = JSON.parse(localStorage.getItem('comments')) || [];
-            const updatedComments = comments.filter(comment => comment.name !== name || comment.text !== text);
-            localStorage.setItem('comments', JSON.stringify(updatedComments));
-        };
-
-        // Add a comment to the grid
-        const addCommentToGrid = (name, text) => {
-            const newReview = document.createElement('div');
-            newReview.classList.add('review-card');
-            newReview.innerHTML = `
-                <p>"${text}"</p>
-                <p class="reviewer new">- ${name}</p>
-                <button class="remove-btn" style="background-color: orange; color: white; border: none; padding: 0.5rem; cursor: pointer; border-radius: 4px;">Устгах</button>
-            `;
-            const removeBtn = newReview.querySelector('.remove-btn');
-            removeBtn.addEventListener('click', () => {
-                reviewsGrid.removeChild(newReview);
-                removeComment(name, text);
-            });
-            reviewsGrid.appendChild(newReview);
-        };
-
         // Handle form submission
         commentForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            console.log("Form submitted");  // Check if the form is being submitted
             const nameText = nameBox.value.trim();
             const commentText = commentBox.value.trim();
-            console.log("nameText:", nameText, "commentText:", commentText);  // Check the input values
             if (nameText === '' || commentText === '') {
                 commentError.style.display = 'block';
             } else {
                 commentError.style.display = 'none';
-                addCommentToGrid(nameText, commentText);
+                this.addCommentToGrid(nameText, commentText);
                 saveComment(nameText, commentText);
                 nameBox.value = '';
                 commentBox.value = '';
             }
         });
-        
     }
 }
 
