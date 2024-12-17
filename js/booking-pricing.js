@@ -1,6 +1,5 @@
 let selectedOptions = { duration: 0, hotel: 0, meal: 0, transport: 0 };
 let peopleCount = { adults: 0, children: 0 };
-<<<<<<< HEAD
 // // function updateCartCount() {
 //     const bookingList = JSON.parse(localStorage.getItem('bookingList')) || [];
 //     const cartItemCountElement = document.getElementById('cartItemCount');
@@ -27,12 +26,6 @@ async function updateCartCount() {
     } catch (error) {
         console.error('API call failed:', error.message);
     }
-=======
-function updateCartCount() {
-    const bookingList = JSON.parse(localStorage.getItem('bookingList')) || [];
-    const cartItemCountElement = document.getElementById('cartItemCount');
-    cartItemCountElement.textContent = bookingList.length;
->>>>>>> e27a13ce9c7516783d1b6fb04255036943c07cc2
 }
 // Handle option card selections
 document.querySelectorAll('.option-card').forEach(card => {
@@ -97,7 +90,6 @@ function processBooking() {
         meal: document.querySelector('.option-card[data-type="meal"].selected')?.textContent.trim() || "",
         transport: document.querySelector('.option-card[data-type="transport"].selected')?.textContent.trim() || "",
         adults: peopleCount.adults || 0,
-<<<<<<< HEAD
         children: peopleCount.children == 0.5 ? 1 : peopleCount.children || 0,
         sumPrice,
         totalPrice,
@@ -128,17 +120,5 @@ function processBooking() {
     updateCartCount();
 
 
-=======
-        children: peopleCount.children == 0.5 ? 1 : 0 || 0,
-        sumPrice,
-        totalPrice
-    };
-
-    bookingList.push(bookingDetails);
-
-    // Save the updated bookingList to localStorage
-    localStorage.setItem('bookingList', JSON.stringify(bookingList));
-    updateCartCount();
->>>>>>> e27a13ce9c7516783d1b6fb04255036943c07cc2
     // window.location.href = 'payment.html';
 }
