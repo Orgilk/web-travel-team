@@ -18,7 +18,7 @@ class BookingSection extends HTMLElement {
         return {
             "travelDirections": [
                 {
-                    "direction": "huhmuur",
+                    "direction": "huhnuur",
                     "bookingSections": [
                         {
                             "title": "📅 Аяллын Хугацаа ",
