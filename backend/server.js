@@ -20,7 +20,7 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/destinations', destinationRoutes);
 
 // Start server
-const PORT = process.env.PORT || 5006;
+const PORT = process.env.PORT || 5005;
 
 const startServer = (port) => {
     app.listen(port, () => {
