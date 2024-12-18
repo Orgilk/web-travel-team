@@ -120,17 +120,17 @@
                             суралцах аяллаа одоогоос эхлүүл!</p>
                     </div>
                 </article>
-                <article class="carousel_item">
-                    <img src="./assets/back1.jpeg" alt="" class="carousel_img drag" draggable="false">
-                    <div class="carousel_caption-2">
+                <article class="carousel_item carousel_item__active">
+                    <img src="./assets/huvsgul2.jpeg" alt="" class="carousel_img" draggable="false">
+                    <div class="carousel_caption-1">
                         <h1>Боловсролын шилдэг мэргэжилтнүүд</h1>
                         <p>Манай сургалтуудыг шилдэг их дээд сургуулиудад багшилдаг, олон жилийн арвин туршлагатай
-                            онцгой багш нар зааж байна.</p>
+                            онцгой багш нар зааж байна</p>
                     </div>
                 </article>
-                <article class="carousel_item">
-                    <img src="./assets/back2.jpeg" alt="" class="carousel_img" draggable="false">
-                    <div class="carousel_caption-3">
+                <article class="carousel_item carousel_item__active">
+                    <img src="./assets/huvsgul1.jpg" alt="" class="carousel_img" draggable="false">
+                    <div class="carousel_caption-1">
                         <h1>НАСАН ТУРШИЙН БАТАЛГААГ ЗӨВХӨН ТАНД</h1>
                         <p>Бид таны амжилтад чин сэтгэлээсээ хандан, олж авсан мэдлэг бүрийг тань батлах сертификат
                             олгох болно.</p>
@@ -203,8 +203,32 @@
             header.classList.toggle("sticky", window.scrollY > 500);
         })
 
-
     </script>
+     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+      const slides = document.querySelectorAll(".carousel_item");
+      let currentIndex = 0;
+  
+      function showSlide(index) {
+          slides.forEach((slide, i) => {
+              slide.classList.toggle("carousel_item__active", i === index);
+          });
+      }
+  
+      function nextSlide() {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+      }
+  
+      // Initial slide
+      showSlide(currentIndex);
+  
+      // Automatic slide transition
+      setInterval(nextSlide, 5000);
+  });
+  
+  
+      </script>
 </body>
 
 </html>

@@ -514,16 +514,19 @@ ul {
 
 
 .carousel {
-    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    background:white;
+
 }
+
 .carousel_inner{
-    height: 600px;
+    height: 800px;
     display: flex;
     border-radius: 10px;
     max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
     box-shadow: 0 10px 20px 5px #a3a1a5;
+    margin-bottom: 100px;
  }
  
  .carousel_inner::after{
@@ -540,7 +543,7 @@ ul {
     float: left;
     display: none;
     max-width: 100%;
-    margin-right: -100%;
+    /* margin-right: -100%; */
  }
  
  .carousel_item__active,
@@ -575,8 +578,8 @@ ul {
  /* carousel */
  .carousel_img{
     display: flex;
-    object-fit: cover;
-    max-width: 100%;
+    height: 740px;
+    margin-right: 60px;
     filter: brightness(40%);
  }
  .carousel_caption-1 {
@@ -584,13 +587,14 @@ ul {
     flex-direction: column;
     display: flex;
     justify-content: start;
-    top: 30%;
+    top: 20%;
     left: 0;
+    right: 0;
 
  }
  .carousel_caption-1  {
-    width: 50%;
-    padding-left: 60px;
+    width: 100%;
+    /* padding-left: 60px; */
 }
 .carousel_caption-1  h1{
     font-size:  4.8rem;
@@ -598,9 +602,11 @@ ul {
     color: #f9f9f9;
     font-weight: 400;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 .carousel_caption-1  p {
+    margin-top: 300px;
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: 300;
@@ -657,4 +663,5 @@ ul {
     font-size: 1.2rem;
     font-weight: 300;
 }
+
 
