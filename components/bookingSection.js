@@ -18,7 +18,7 @@ class BookingSection extends HTMLElement {
         return {
             "travelDirections": [
                 {
-                    "direction": "city",
+                    "direction": "huhmuur",
                     "bookingSections": [
                         {
                             "title": "📅 Аяллын Хугацаа ",
@@ -321,8 +321,10 @@ class BookingSection extends HTMLElement {
             meal: this.shadowRoot.querySelector('.option-card[data-type="meal"].selected')?.textContent.trim() || "",
             transport: this.shadowRoot.querySelector('.option-card[data-type="transport"].selected')?.textContent.trim() || "",
             adults: this.peopleCount.adults,
-            children: this.peopleCount.children,
-            totalPrice
+            children: this.peopleCount.children === 0.5 ? 1:this.peopleCount.children,
+            totalPrice,
+            sumPrice,
+            destination:"huhnuur"
         };
 
         bookingList.push(bookingDetails);

@@ -93,7 +93,7 @@ function processBooking() {
         children: peopleCount.children == 0.5 ? 1 : peopleCount.children || 0,
         sumPrice,
         totalPrice,
-        destination: "city"
+        destination: "huhnuur"
     };
     console.log("bookingDe: ", bookingDetails)
     bookingList.push(bookingDetails);
