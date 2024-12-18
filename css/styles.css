@@ -76,6 +76,7 @@ header ul li a{
 }
 .navigation-list li{
     width: 100%;
+      justify-content: center;
 }
 .navigation-list ul li {
     padding: 10px 30px;
@@ -96,8 +97,6 @@ header.sticky .search-bar  input[type="search"] {
     color: hsl(252, 30%, 17%);
 }
 .signup {
-    border: 2px solid #ffffff;
-    border-radius: 5px;
     transition: ease 0.3s;
 }
 .nav-bar ul li a:hover {

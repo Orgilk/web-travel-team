@@ -21,7 +21,7 @@ class BookingSection extends HTMLElement {
                     "direction": "city",
                     "bookingSections": [
                         {
-                            "title": "📅 Аяллын Хугацаа -city",
+                            "title": "📅 Аяллын Хугацаа ",
                             "id": "duration",
                             "options": [
                                 { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
@@ -60,7 +60,7 @@ class BookingSection extends HTMLElement {
                     "direction": "huvsgul1",
                     "bookingSections": [
                         {
-                            "title": "📅 Аяллын Хугацаа huvsgul",
+                            "title": "📅 Аяллын Хугацаа",
                             "id": "duration",
                             "options": [
                                 { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000 },
