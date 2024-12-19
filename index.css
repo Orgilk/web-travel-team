@@ -375,11 +375,10 @@ ul {
     margin: 0;
     padding: 0; /* Remove default styles */
 }
-
 .footer {
     position: relative;
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap; 
     justify-content: space-between; /* Spread content evenly */
     text-align: left; /* Align text to the left */
     white-space: normal; /* Allow text to wrap naturally */
@@ -393,7 +392,7 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('assets/hyrgas.jpg');
+    background-color: #ccc;
     background-size: cover; /* Ensure the background image covers the entire footer */
     background-position: center; /* Center the background image */
     filter: blur(10px); /* Apply the blur effect */
@@ -404,10 +403,20 @@ ul {
     padding: 0 15px;
     font-size: small;
 }
+.footer .content {
+    display: flex; /* Хэсгүүдийг хажуу тийш зэрэгцүүлэх */
+    justify-content: space-between; /* Хоорондын зайг жигд хуваарилах */
+    gap: 50px; /* Хэсгүүдийн хооронд .. зайтай болгох */
+}
+
+.footer .footer-col {
+    flex: 100; /* Хэсэг тус бүрийг тэнцүү эзэлхүүнтэй болгох */
+    margin: 10 50px; /* Хажуу талдаа нэмэлт зай нэмэх */
+}
 
 .footer-col h4 {
     font-size: 1.3rem;
-    color: #ffffff;
+    color: #000000;
     text-transform: capitalize;
     margin-bottom: 20px; /* Adjusted spacing */
     font-weight: 500;
@@ -433,7 +442,7 @@ ul {
 
 .footer-col ul li a {
     font-size: 14px;
-    color: #bbbbbb;
+    color: #1c1c1c;
     text-decoration: none;
     font-weight: 300;
     transition: all 0.3s ease;
@@ -442,7 +451,7 @@ ul {
 }
 
 .footer-col ul li a:hover {
-    color: #ffffff;
+    color: #3b2e2e;
     padding-left: 8px;
 }
 
@@ -455,7 +464,7 @@ ul {
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #ffffff;
+    color: #0a0a0a;
     transition: all 0.5s ease;
 }
 

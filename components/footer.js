@@ -8,10 +8,10 @@ class Footer extends HTMLElement {
                 <div class="container">
                     <div class="content">
                         <div class="footer-col">
-                            <h4>1234.mn</h4>
+                            <h4>Ерөнхий</h4>
                             <ul>
                                 <li><a href="#">Бидний тухай</a></li>
-                                <li><a href="#">Үйл ажиллагааны чиглэл</a></li>
+                                <li><a href="#">Аялалын чиглэл</a></li>
                                 <li><a href="#">Нууцлалын бодлого</a></li>
                                 <li><a href="#">Үйлчилгээний нөхцөл</a></li>
                             </ul>
