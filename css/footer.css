@@ -1,0 +1,106 @@
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between; /* Spread content evenly */
+    text-align: left; /* Align text to the left */
+    white-space: normal; /* Allow text to wrap naturally */
+    width: 100%;
+    overflow: hidden; /* Ensure the blurred background doesn’t overflow */
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    background-size: cover; /* Ensure the background image covers the entire footer */
+    background-position: center; /* Center the background image */
+    filter: blur(10px); /* Apply the blur effect */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+    font-size: small;
+}
+
+.footer-col h4 {
+    font-size: 1.3rem;
+    color: #000000;
+    text-transform: capitalize;
+    margin-bottom: 20px; /* Adjusted spacing */
+    font-weight: 500;
+    position: relative;
+    text-align: start;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    line-height: 1.5; /* Improved readability */
+    text-align: start;
+}
+
+.footer-col ul li a {
+    font-size: 14px;
+    color: #1c1c1c;
+    text-decoration: none;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: start;
+}
+
+.footer-col ul li a:hover {
+    color: #3b2e2e;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff33;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #0a0a0a;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 767px) {
+    .footer {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}

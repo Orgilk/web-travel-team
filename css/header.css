@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #2C5282;
+    --secondary-color: #4299E1;
+    --accent-color: #F6AD55;
+    --text-color: #2D3748;
+    --light-text: #FFFFFF;
+    --background-light: #F7FAFC;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-light);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+.nav-bar {
+    background: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 0;
+    position: fixed;
+    z-index: 10;
+}
+
+.nav-bar ul {
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigation-list li {
+    width: 100%;
+    justify-content: center;
+}
+
+.navigation-list ul li {
+    padding: 10px 30px;
+}
+
+header.sticky {
+    padding: 5px 10px;
+    background: #ffffff;
+    filter: drop-shadow(0 -5px 5px #000000);
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: #000000;
+}
+
+header.sticky .search-bar {
+    background-color: hsl(252, 30%, 95%);
+}
+
+header.sticky .search-bar input[type="search"] {
+    color: hsl(252, 30%, 17%);
+}
+
+.signup {
+    transition: ease 0.3s;
+}
+
+.nav-bar ul li a:hover {
+    transform: scale(1.03);
+}
+
+.nav-bar ul li a:hover::after {
+    color: #ffffff;
+}
+
+.small-image {
+    height: 80px;
+}
+
+.nav-bar ul li a:hover {
+    transform: scale(1.03);
+}
+
+.nav-bar ul li a:hover::after {
+    color: #ffffff;
+}
+
+.cart-icon {
+    fill: blue;
+    color:blue;
+}
+.cart-highlight {
+    color: white;
+}

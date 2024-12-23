@@ -5,28 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Adventure</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/footer.js"></script>
 </head>
 
 <body>
-    <script src="./js/script.js" defer></script>
-    <header id="hero-section" class="home-main" data-bg-images="assets/back.jpg,assets/back1.jpeg,assets/back2.jpeg">
-        <nav class="navbar">
-            <a href="./">
-                <img src="assets/advent.png" alt="Adventure Image" class="small-image">
-            </a>
-            <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About us</a></li>
-                <li><a href="./destinations.html">Destinations</a></li>
-                <li><a href="./news.html">News</a></li>
-                <li><a href="./login.html">Login</a></li>
-            </ul>
-        </nav>
-        <h1>Discover beautiful places</h1>
-    </header>
+    <script type="module" src="./components/hero_section.js"></script>
+    <script src="./js/header.js"></script>
+    <header-nav></header-nav>
+    <header-section></header-section>
+
+    <hero-section data-bg-images="assets/back.jpg,assets/back1.jpeg,assets/back2.jpeg">
+        <section class="destination-overview">
+            <h1 style="font-size: 60px; color: white;">Хөвсгөл Нуур</h1>
+        </section>
+    </hero-section>
 
     <main>
         <section class="statistics">
@@ -80,7 +76,7 @@
                 </a>
             </article>
             <article class="tavanbogd">
-                <a href="altai.html">
+                <a href="pages/altai.html">
                     <img src="assets/AltaiTavanBogd.jpg" alt="Altai">
                     <h4>Altai tavan bogd</h4>
                     <div class="rating" title="4 out of 5 stars">

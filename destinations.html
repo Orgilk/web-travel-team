@@ -5,31 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations - Adventure</title>
-    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="./css/destinations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/footer.js"></script>
 </head>
 
 <body>
-    <header class="home-main">
-        <nav class="navbar">
-            <a href="./">
-                <img src="assets/advent.png" alt="Adventure Image" class="small-image">
-            </a>
-            <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About us</a></li>
-                <li><a href="./destinations.html">Destinations</a></li>
-                <li><a href="./news.html">News</a></li>
-                <li><a href="./favorite.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="70"
-                            height="30">
-                            <path
-                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                                fill="none" stroke="currentColor" stroke-width="2" />
-                        </svg></a></li>
-            </ul>
-        </nav>
-        <h1>Destinations</h1>
-    </header>
+    <script type="module" src="./components/hero_section.js"></script>
+    <script src="./js/header.js"></script>
+    <header-nav></header-nav>
+    <header-section></header-section>
+
+    <hero-section data-bg-images="assets/back.jpg,assets/back1.jpeg,assets/back2.jpeg">
+        <section class="destination-overview">
+            <h1 style="font-size: 60px; color: white;">Хөвсгөл Нуур</h1>
+        </section>
+    </hero-section>
 
     <main>
         <form class="search-places">
@@ -68,7 +60,7 @@
         <!-- Footer content -->
     </footer>
 
-    <script type="module" src="js/destination.js"></script>
+    <script type="module" src="./js/destination.js"></script>
 
 </body>
 

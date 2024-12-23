@@ -4,6 +4,7 @@ class Footer extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
+              <link rel="stylesheet" href="../css/footer.css">
             <footer class="footer">
                 <div class="container">
                     <div class="content">

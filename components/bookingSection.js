@@ -19,12 +19,13 @@ class BookingSection extends HTMLElement {
             "travelDirections": [
                 {
                     "direction": "huhnuur",
+                    "map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2213678.5450399895!2d100.74254077752268!3d51.30968531930048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d0e5d1ba6b92eab%3A0xd9305b7b011f9111!2sKhuvsgul%20Lake!5e0!3m2!1sen!2smn!4v1732012981500!5m2!1sen!2smn",
                     "bookingSections": [
                         {
                             "title": "📅 Аяллын Хугацаа ",
                             "id": "duration",
                             "options": [
-                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 150000, "images": ["../assets/about1.jpg", "../assets/huwsgul.jpg", "../assets/huwsgul.jpg"] },
                                 { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/berlin.jpg", "./assets/berlin.jpg", "./assets/berlin.jpg"] }
                             ]
                         },
@@ -32,64 +33,65 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000,"images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000,"images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"]  },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000,"images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"]  }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000,"images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"]  },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000,"images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"]  }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000,"images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"]  },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000,"images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"]  }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
                             ]
                         }
                     ],
                     "map": ""
                 },
                 {
-                    "direction": "huvsgul",
+                    "direction": "hongoriinels",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
                     "bookingSections": [
                         {
-                            "title": "📅 Аяллын Хугацаа huvsgul",
+                            "title": "📅 Аяллын Хугацаа hongoriinels",
                             "id": "duration",
                             "options": [
-                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000 },
-                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000 }
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
                             ]
                         },
                         {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000 },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000 },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000 }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000 },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000 }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000 },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000 }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
                             ]
                         }
                     ]
@@ -109,6 +111,7 @@ class BookingSection extends HTMLElement {
 
     render() {
         const direction = this.getAttribute('direction'); // Get the "direction" attribute
+        console.log("direction: ", direction)
         const selectedDirection = this.jsonData.travelDirections.find(item => item.direction === direction); // Find the matching direction
         if (!selectedDirection) {
             console.error('Direction not found');
@@ -127,7 +130,7 @@ class BookingSection extends HTMLElement {
                 <div class="package-columns">
                     <div class="map">
                                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2213678.5450399895!2d100.74254077752268!3d51.30968531930048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d0e5d1ba6b92eab%3A0xd9305b7b011f9111!2sKhuvsgul%20Lake!5e0!3m2!1sen!2smn!4v1732012981500!5m2!1sen!2smn"
+                    src="${this.optionsData.map}"
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -171,9 +174,10 @@ class BookingSection extends HTMLElement {
                             <p>${option.desc}</p>
                             <p>Үнэ: ${option.price.toLocaleString()}₮</p>
                             <div class="booking-selection" style="display: none;">
-                                ${option.images ? option.images.map(image => `<img src="${image}" alt="option image" class="booking image">`).join('') : ''}
+                                ${option.images ? option.images.map(image => `
+                                    <img src="${image}" alt="Option image" class="booking-image">
+                                `).join('') : ''}
                             </div>
-                            
                         </div>
                     `).join('')}
                 </div>
@@ -181,21 +185,22 @@ class BookingSection extends HTMLElement {
         `;
     }
 
+
     attachEventListeners() {
-        // Handle option card selections
+        // Attach event listeners for option cards dynamically
         this.shadowRoot.querySelectorAll('.option-card').forEach(card => {
-            card.addEventListener('click', this.handleOptionSelection.bind(this));
+            card.addEventListener('click', event => this.handleOptionCardClick(event));
         });
 
-        // Add event listeners for people count inputs
-        this.shadowRoot.getElementById('adult-count').addEventListener('input', this.updatePeopleCount.bind(this));
-        this.shadowRoot.getElementById('child-count').addEventListener('input', this.updatePeopleCount.bind(this));
+        // Attach event listeners for people count inputs
+        this.shadowRoot.getElementById('adult-count').addEventListener('input', () => this.updatePeopleCount());
+        this.shadowRoot.getElementById('child-count').addEventListener('input', () => this.updatePeopleCount());
 
-        // Handle booking button
-        this.shadowRoot.getElementById('bookBtn').addEventListener('click', this.processBooking.bind(this));
+        // Attach event listener for booking button
+        this.shadowRoot.getElementById('bookBtn').addEventListener('click', () => this.processBooking());
     }
 
-    handleOptionSelection(event) {
+    handleOptionCardClick(event) {
         const card = event.currentTarget;
         const type = card.getAttribute('data-type');
         const price = parseInt(card.getAttribute('data-price')) || 0;
@@ -203,12 +208,19 @@ class BookingSection extends HTMLElement {
         // Deselect other cards of the same type
         this.shadowRoot.querySelectorAll(`.option-card[data-type="${type}"]`).forEach(otherCard => {
             otherCard.classList.remove('selected');
+            const imgSection = otherCard.querySelector('.booking-selection');
+            if (imgSection) imgSection.style.display = 'none'; // Hide images for deselected cards
         });
 
-        // Select this card
+        // Select the clicked card
         card.classList.add('selected');
+        const imgSection = card.querySelector('.booking-selection');
+        if (imgSection) imgSection.style.display = 'block'; // Show images for the selected card
+
+        // Update selected options
         this.selectedOptions[type] = price;
 
+        // Recalculate the total price
         this.calculateTotalPrice();
     }
 
@@ -268,6 +280,7 @@ class BookingSection extends HTMLElement {
 
 
     processBooking() {
+        const direction = this.getAttribute('direction'); 
         let bookingList = JSON.parse(localStorage.getItem('bookingList')) || [];
         if (!Object.values(this.selectedOptions).every(value => value > 0)) {
             alert('Бүх сонголтоо хийнэ үү!');
@@ -283,10 +296,10 @@ class BookingSection extends HTMLElement {
             meal: this.shadowRoot.querySelector('.option-card[data-type="meal"].selected')?.textContent.trim() || "",
             transport: this.shadowRoot.querySelector('.option-card[data-type="transport"].selected')?.textContent.trim() || "",
             adults: this.peopleCount.adults,
-            children: this.peopleCount.children === 0.5 ? 1:this.peopleCount.children,
+            children: this.peopleCount.children === 0.5 ? 1 : this.peopleCount.children,
             totalPrice,
             sumPrice,
-            destination:"huhnuur"
+            destination: direction || "huhnuur"
         };
 
         bookingList.push(bookingDetails);
