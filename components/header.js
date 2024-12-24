@@ -19,7 +19,7 @@ class Header extends HTMLElement {
                     <li><a href="./destinations.html">Destinations</a></li>
                     <li><a href="./news.html">News</a></li>
                     <li><a href="./login.html">Login</a></li>
-                    <li>
+                    <li class="cart-item">
                         <a href="payment.html">
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
@@ -33,7 +33,7 @@ class Header extends HTMLElement {
                                     fill="currentColor">
                                 </path>
                             </svg>
-                            <span id="cartItemCount" class="cart-icon-text">0</span> items
+                            <span id="cartItemCount" class="cart-icon-text">0</span> <p class="cart-icon-items">items</p>
                         </a>
                     </li>
                     <li><a href="./favorite.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="70"
@@ -45,10 +45,10 @@ class Header extends HTMLElement {
                 </ul>
             </header>
         `;
-
+    
         this.updateCartCount();
     }
-
+    
     // Custom setState method to update the state and trigger a UI update
     setState(newState) {
         // Merge new state with current state

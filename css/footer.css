@@ -1,14 +1,14 @@
-
 .footer {
     position: relative;
     display: flex;
     flex-wrap: nowrap; 
-    justify-content: space-between; /* Spread content evenly */
-    text-align: left; /* Align text to the left */
-    white-space: normal; /* Allow text to wrap naturally */
+    justify-content: space-between;
+    text-align: left;
+    white-space: normal;
     width: 100%;
-    overflow: hidden; /* Ensure the blurred background doesn’t overflow */
+    overflow: hidden;
 }
+
 .footer::before {
     content: "";
     position: absolute;
@@ -17,11 +17,12 @@
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    background-size: cover; /* Ensure the background image covers the entire footer */
-    background-position: center; /* Center the background image */
-    filter: blur(10px); /* Apply the blur effect */
-    z-index: -1; /* Place the pseudo-element behind the content */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
 }
+
 .footer-col {
     width: 25%;
     padding: 0 15px;
@@ -32,7 +33,7 @@
     font-size: 1.3rem;
     color: #000000;
     text-transform: capitalize;
-    margin-bottom: 20px; /* Adjusted spacing */
+    margin-bottom: 20px;
     font-weight: 500;
     position: relative;
     text-align: start;
@@ -50,7 +51,7 @@
 
 .footer-col ul li {
     margin-bottom: 10px;
-    line-height: 1.5; /* Improved readability */
+    line-height: 1.5;
     text-align: start;
 }
 
@@ -87,10 +88,9 @@
     background-color: #ffffff;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 767px) {
     .footer {
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        flex-wrap: wrap;
     }
 
     .footer-col {
