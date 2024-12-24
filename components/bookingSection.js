@@ -18,11 +18,12 @@ class BookingSection extends HTMLElement {
         return {
             "travelDirections": [
                 {
-                    "direction": "huhnuur",
-                    "map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2213678.5450399895!2d100.74254077752268!3d51.30968531930048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d0e5d1ba6b92eab%3A0xd9305b7b011f9111!2sKhuvsgul%20Lake!5e0!3m2!1sen!2smn!4v1732012981500!5m2!1sen!2smn",
+                    "direction": "Altai",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
+
                     "bookingSections": [
                         {
-                            "title": "📅 Аяллын Хугацаа ",
+                            "title": "📅 Аяллын Хугацаа A",
                             "id": "duration",
                             "options": [
                                 { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 150000, "images": ["../assets/about1.jpg", "../assets/huwsgul.jpg", "../assets/huwsgul.jpg"] },
