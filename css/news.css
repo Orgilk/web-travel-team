@@ -94,43 +94,6 @@ body {
     color: var(--secondary-color);
 }
 
-footer {
-    color: var(--text-color);
-    padding: 1.25rem;
-    text-align: left;
-    margin-left: 10%;
-
-    & .footer-columns {
-        display: flex;
-        justify-content: space-between;
-        max-width: 1200px;
-        margin: 0 auto;
-
-        & .column {
-            flex: 1;
-            padding: 0 1.25rem;
-
-            & .links {
-                list-style: none;
-                padding: 0;
-
-                & li {
-                    margin-bottom: 0.625rem;
-
-                    & a {
-                        text-decoration: none;
-                        color: var(--link-color);
-                    }
-                }
-
-                & .social a {
-                    margin-right: 0.3125rem;
-                    display: inline-block;
-                }
-            }
-        }
-    }
-}
 
 
   .copyright {
@@ -179,7 +142,7 @@ footer {
     }
 }
 
-.nav-container {
+/* .nav-container {
     position: fixed;
     top: 0;
     width: 100%;
@@ -211,9 +174,9 @@ footer {
 }
 
 /* Remove old header styles */
-.travel-nav,
+/* .travel-nav,
 header.sticky,
 .logo {
     display: none;
-}
+} */ */
 

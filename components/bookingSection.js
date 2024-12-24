@@ -18,52 +18,11 @@ class BookingSection extends HTMLElement {
         return {
             "travelDirections": [
                 {
-                    "direction": "Altai",
-                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
-
-                    "bookingSections": [
-                        {
-                            "title": "📅 Аяллын Хугацаа A",
-                            "id": "duration",
-                            "options": [
-                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 150000, "images": ["../assets/about1.jpg", "../assets/huwsgul.jpg", "../assets/huwsgul.jpg"] },
-                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/berlin.jpg", "./assets/berlin.jpg", "./assets/berlin.jpg"] }
-                            ]
-                        },
-                        {
-                            "title": "🏨 Байрны Сонголт",
-                            "id": "hotel",
-                            "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
-                            ]
-                        },
-                        {
-                            "title": "🍽️ Хоолны Сонголт",
-                            "id": "meal",
-                            "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
-                            ]
-                        },
-                        {
-                            "title": "🚌 Тээврийн Хэрэгсэл",
-                            "id": "transport",
-                            "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
-                            ]
-                        }
-                    ],
-                    "map": ""
-                },
-                {
-                    "direction": "hongoriinels",
+                    "direction": "khustai",
                     "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
                     "bookingSections": [
                         {
-                            "title": "📅 Аяллын Хугацаа hongoriinels",
+                            "title": "📅 Аяллын Хугацаа K",
                             "id": "duration",
                             "options": [
                                 { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
@@ -96,7 +55,319 @@ class BookingSection extends HTMLElement {
                             ]
                         }
                     ]
-                }
+                },
+                {
+                    "direction": "hyrgas",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
+                    "bookingSections": [
+                        {
+                            "title": "📅 Аяллын Хугацаа hyrgas",
+                            "id": "duration",
+                            "options": [
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🏨 Байрны Сонголт",
+                            "id": "hotel",
+                            "options": [
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🍽️ Хоолны Сонголт",
+                            "id": "meal",
+                            "options": [
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🚌 Тээврийн Хэрэгсэл",
+                            "id": "transport",
+                            "options": [
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "direction": "hongoriinels",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
+                    "bookingSections": [
+                        {
+                            "title": "📅 Аяллын Хугацаа els",
+                            "id": "duration",
+                            "options": [
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🏨 Байрны Сонголт",
+                            "id": "hotel",
+                            "options": [
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🍽️ Хоолны Сонголт",
+                            "id": "meal",
+                            "options": [
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🚌 Тээврийн Хэрэгсэл",
+                            "id": "transport",
+                            "options": [
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "direction": "hiid",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
+                    "bookingSections": [
+                        {
+                            "title": "📅 Аяллын Хугацаа hiid",
+                            "id": "duration",
+                            "options": [
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🏨 Байрны Сонголт",
+                            "id": "hotel",
+                            "options": [
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🍽️ Хоолны Сонголт",
+                            "id": "meal",
+                            "options": [
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🚌 Тээврийн Хэрэгсэл",
+                            "id": "transport",
+                            "options": [
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "direction": "orkhon",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
+                    "bookingSections": [
+                        {
+                            "title": "📅 Аяллын Хугацаа orkhon",
+                            "id": "duration",
+                            "options": [
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🏨 Байрны Сонголт",
+                            "id": "hotel",
+                            "options": [
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🍽️ Хоолны Сонголт",
+                            "id": "meal",
+                            "options": [
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🚌 Тээврийн Хэрэгсэл",
+                            "id": "transport",
+                            "options": [
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "direction": "saihan",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
+                    "bookingSections": [
+                        {
+                            "title": "📅 Аяллын Хугацаа saihan",
+                            "id": "duration",
+                            "options": [
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🏨 Байрны Сонголт",
+                            "id": "hotel",
+                            "options": [
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🍽️ Хоолны Сонголт",
+                            "id": "meal",
+                            "options": [
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🚌 Тээврийн Хэрэгсэл",
+                            "id": "transport",
+                            "options": [
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "direction": "Altai",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
+                    "bookingSections": [
+                        {
+                            "title": "📅 Аяллын Хугацаа altai",
+                            "id": "duration",
+                            "options": [
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🏨 Байрны Сонголт",
+                            "id": "hotel",
+                            "options": [
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🍽️ Хоолны Сонголт",
+                            "id": "meal",
+                            "options": [
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🚌 Тээврийн Хэрэгсэл",
+                            "id": "transport",
+                            "options": [
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "direction": "huhnuur",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
+                    "bookingSections": [
+                        {
+                            "title": "📅 Аяллын Хугацаа huhnuur",
+                            "id": "duration",
+                            "options": [
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🏨 Байрны Сонголт",
+                            "id": "hotel",
+                            "options": [
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🍽️ Хоолны Сонголт",
+                            "id": "meal",
+                            "options": [
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🚌 Тээврийн Хэрэгсэл",
+                            "id": "transport",
+                            "options": [
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "direction": "huvsgul",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.518123785995!2d102.33231961236363!3d43.74133637097764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune!5e0!3m2!1sen!2smn!4v1734774627577!5m2!1sen!2smn",
+                    "bookingSections": [
+                        {
+                            "title": "📅 Аяллын Хугацаа huvsgul",
+                            "id": "duration",
+                            "options": [
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🏨 Байрны Сонголт",
+                            "id": "hotel",
+                            "options": [
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🍽️ Хоолны Сонголт",
+                            "id": "meal",
+                            "options": [
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        },
+                        {
+                            "title": "🚌 Тээврийн Хэрэгсэл",
+                            "id": "transport",
+                            "options": [
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                            ]
+                        }
+                    ]
+                },
             ]
         };
     }

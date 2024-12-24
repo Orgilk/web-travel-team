@@ -6,24 +6,22 @@
     <title>About us</title>
     <link rel="stylesheet" href="./css/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/footer.js"></script>
 </head>
 <body>
-    <!-- Header хэсэг -->
-    <div class="nav-container">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="destinations.html">Destination</a></li>
-            <li><a href="news.html">News</a></li>
-            
-        </ul>
-    </div>
+    <script src="./js/header.js"></script>
+    <script type="module" src="./components/hero_section.js"></script>
+    <header-nav></header-nav>
+    <header-section></header-section>
 
     <!-- Hero Section -->
-    <div class="hero-section">
-        <h1>Монголын үзэсгэлэнт газруудаар аялах таны хамгийн сайн хөтөч</h1>
-        
-    </div>
+    <hero-section data-bg-images="assets/back.jpg,assets/back1.jpeg,assets/back2.jpeg">
+        <section class="destination-overview">
+            <h1 style="font-size: 60px; color: white;">Хөвсгөл Нуур</h1>
+        </section>
+    </hero-section>
 
     <!-- About Content -->
     <section class="about-content">
@@ -89,37 +87,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer хэсэг -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Холбоо барих</h3>
-                <p>Утас: (976) 99887766</p>
-                <p>Имэйл: info@travel.mn</p>
-                <p>Хаяг: Улаанбаатар, Монгол</p>
-            </div>
-            <div class="footer-section">
-                <h3>Цэс</h3>
-                <ul>
-                    <li><a href="index.html">Нүүр</a></li>
-                    <li><a href="destinations.html">Аялалууд</a></li>
-                    <li><a href="news.html">Мэдээ</a></li>
-                    <li><a href="about.html">Бидний тухай</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Сошиал</h3>
-                <div class="social-links">
-                    <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Аялал Жуулчлал. Бүх эрх хуулиар хамгаалагдсан.</p>
-        </div>
-    </footer>
+    <footer-component></footer-component>
+ 
 </body>
 </html>
