@@ -222,7 +222,7 @@ main article {
     justify-content: center;
     padding: 24px;
     display: flex;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
 }
 .stat-icon {
     display: flex;
