@@ -16,6 +16,12 @@
     --primary-border: 1px solid #333;
 }
 
+.dark-mode {
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --primary-text-color: #ffffff;
+  }
+/* 
 nav {
     display: flex;
     align-items: center;
@@ -44,7 +50,7 @@ nav ul li a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
-}
+} */
 * {
     margin: 0;
     padding: 0;
@@ -73,7 +79,7 @@ body {
         height: auto;
     }
 }
-
+/* 
 nav {
     display: flex;
     justify-content: space-between;
@@ -125,7 +131,7 @@ nav {
             font-size: 1.25rem;
         }
     }
-}
+} */
 
 h1 {
     position: absolute;
@@ -136,6 +142,9 @@ h1 {
     color: var(--text-color);
 }
 
+h4 {
+    color: var(--background-color);
+}
 main {
     padding: 1.25rem;
     background-color: var(--background-color);
@@ -150,7 +159,7 @@ main {
 
         & input[type="text"] {
             background-color: transparent;
-            border: none;
+            border: var(--primary-border);
             color: var(--primary-text-color);
             padding: 0.625rem;
             font-size: 1rem;
@@ -170,6 +179,7 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
     .search-places {
         display: flex;
@@ -231,12 +241,14 @@ main {
             align-items: center;
             padding: 8px 16px;
             border-radius: 20px;
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--background-color);
+            /* background: rgba(255, 255, 255, 0.1); */
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--primary-text-color);
             transition: all 0.3s ease;
             font-weight: 500;
-            color: #333;
+            color: var(--primary-text-color);
+            /* color: #333; */
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
             &:hover {
@@ -347,12 +359,6 @@ main {
         width: 300px; /* Example width */
         height: 300px; /* Example height */
         background-color: lightgray; /* Example background */
-      }
-      
-      svg {
-        position: absolute;
-        bottom: 10px; /* Distance from the bottom */
-        right: 10px;  /* Distance from the right */
       }
       
     .pagination {
@@ -489,5 +495,5 @@ footer {
     top: 210px;
     right: 10px; /* Adjust the position as needed */
     font-weight: bold;
-    color: black;
+    color: var(--background-color);
 }

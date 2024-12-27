@@ -14,6 +14,9 @@ class Header extends HTMLElement {
                     <li class="logo-list">
                         <a href="./"><img src="../assets/advent.png" alt="logo" class="small-image"></a>
                     </li>
+                    <li>
+                        <button id="theme-toggle" class="theme-button">Dark Mode</button>
+                    </li>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About us</a></li>
                     <li><a href="./destinations.html">Destinations</a></li>
@@ -33,7 +36,8 @@ class Header extends HTMLElement {
                                     fill="currentColor">
                                 </path>
                             </svg>
-                            <span id="cartItemCount" class="cart-icon-text">0</span> <p class="cart-icon-items">items</p>
+                            <span id="cartItemCount" class="cart-icon-text">0</span> 
+                            <p class="cart-icon-items">items</p>
                         </a>
                     </li>
                     <li><a href="./favorite.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="70"
@@ -45,16 +49,13 @@ class Header extends HTMLElement {
                 </ul>
             </header>
         `;
-    
-        this.updateCartCount();
-    }
-    
-    // Custom setState method to update the state and trigger a UI update
-    setState(newState) {
-        // Merge new state with current state
-        this.state = { ...this.state, ...newState };
 
-        // After updating state, call the render or update function
+        this.updateCartCount();
+        this.setupThemeToggle();
+    }
+
+    setState(newState) {
+        this.state = { ...this.state, ...newState };
         this.updateCartCount();
     }
 
@@ -72,24 +73,39 @@ class Header extends HTMLElement {
             }
 
             const data = await response.json();
-
             const cartItemCountElement = this.querySelector('#cartItemCount');
             const cartIcon = this.querySelector('#cartIcon');
 
             if (cartItemCountElement) {
                 const count = data.length;
-                this.setState({ cartItemCount: count });  // Update the state
+                this.setState({ cartItemCount: count });
 
-                // Update cart item count and cart icon color based on item count
                 cartItemCountElement.textContent = this.state.cartItemCount;
-                if (this.state.cartItemCount >0) {
-                    cartIcon.classList.add('cart-highlight');
-                } else {
-                    cartIcon.classList.remove('cart-highlight');
-                }
+                cartIcon.classList.toggle('cart-highlight', this.state.cartItemCount > 0);
             }
         } catch (error) {
             console.error('API call failed:', error.message);
+        }
+    }
+
+    setupThemeToggle() {
+        const toggleButton = this.querySelector('#theme-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleButton.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+
+            // Save the theme preference
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+
+        // Load the saved theme preference on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            toggleButton.textContent = 'Switch to Light Mode';
         }
     }
 }
