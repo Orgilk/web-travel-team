@@ -33,25 +33,25 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/hool25.jpg", "./assets/hool25_.jpg", "./assets/tsuivan.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/horhog.jpg", "./assets/huushuur.jpg", "./assets/horhog.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/avtobus.jpg", "./assets/avtobus1.jpg", "./assets/purgon.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/land.jpg", "./assets/land1.jpg", "./assets/land2.jpg"] }
                             ]
                         }
                     ]
@@ -72,25 +72,25 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/hool25.jpg", "./assets/hool25_.jpg", "./assets/tsuivan.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/horhog.jpg", "./assets/huushuur.jpg", "./assets/horhog.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/avtobus.jpg", "./assets/avtobus1.jpg", "./assets/purgon.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/land.jpg", "./assets/land1.jpg", "./assets/land2.jpg"] }
                             ]
                         }
                     ]
@@ -111,25 +111,25 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/hool25.jpg", "./assets/hool25_.jpg", "./assets/tsuivan.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/horhog.jpg", "./assets/huushuur.jpg", "./assets/horhog.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/avtobus.jpg", "./assets/avtobus1.jpg", "./assets/purgon.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/land.jpg", "./assets/land1.jpg", "./assets/land2.jpg"] }
                             ]
                         }
                     ]
@@ -150,25 +150,25 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/hool25.jpg", "./assets/hool25_.jpg", "./assets/tsuivan.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/horhog.jpg", "./assets/huushuur.jpg", "./assets/horhog.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/avtobus.jpg", "./assets/avtobus1.jpg", "./assets/purgon.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/land.jpg", "./assets/land1.jpg", "./assets/land2.jpg"] }
                             ]
                         }
                     ]
@@ -189,25 +189,25 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/hool25.jpg", "./assets/hool25_.jpg", "./assets/tsuivan.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/horhog.jpg", "./assets/huushuur.jpg", "./assets/horhog.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/avtobus.jpg", "./assets/avtobus1.jpg", "./assets/purgon.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/land.jpg", "./assets/land1.jpg", "./assets/land2.jpg"] }
                             ]
                         }
                     ]
@@ -228,25 +228,25 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/hool25.jpg", "./assets/hool25_.jpg", "./assets/tsuivan.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/horhog.jpg", "./assets/huushuur.jpg", "./assets/horhog.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/avtobus.jpg", "./assets/avtobus1.jpg", "./assets/purgon.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/land.jpg", "./assets/land1.jpg", "./assets/land2.jpg"] }
                             ]
                         }
                     ]
@@ -259,33 +259,33 @@ class BookingSection extends HTMLElement {
                             "title": "📅 Аяллын Хугацаа altai",
                             "id": "duration",
                             "options": [
-                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/altai2.jpg", "./assets/altai5.jpg", "./assets/altai1.jpg"] },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 400000, "images": ["./assets/altai2.jpg", "./assets/altai5.jpg", "./assets/altai1.jpg"] }
                             ]
                         },
                         {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/hool25.jpg", "./assets/hool25_.jpg", "./assets/tsuivan.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/horhog.jpg", "./assets/huushuur.jpg", "./assets/horhog.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/avtobus.jpg", "./assets/avtobus1.jpg", "./assets/purgon.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/land.jpg", "./assets/land1.jpg", "./assets/land2.jpg"] }
                             ]
                         }
                     ]
@@ -306,25 +306,25 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/hool25.jpg", "./assets/hool25_.jpg", "./assets/tsuivan.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/horhog.jpg", "./assets/huushuur.jpg", "./assets/horhog.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/avtobus.jpg", "./assets/avtobus1.jpg", "./assets/purgon.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/land.jpg", "./assets/land1.jpg", "./assets/land2.jpg"] }
                             ]
                         }
                     ]
@@ -345,25 +345,25 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"] },
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
+                                { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
                         {
                             "title": "🍽️ Хоолны Сонголт",
                             "id": "meal",
                             "options": [
-                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Стандарт Хоол", "desc": "Өдөрт 3 удаа", "price": 25000, "images": ["./assets/hool25.jpg", "./assets/hool25_.jpg", "./assets/tsuivan.jpg"] },
+                                { "text": "VIP Хоол", "desc": "Тусгай цэс", "price": 50000, "images": ["./assets/horhog.jpg", "./assets/huushuur.jpg", "./assets/horhog.jpg"] }
                             ]
                         },
                         {
                             "title": "🚌 Тээврийн Хэрэгсэл",
                             "id": "transport",
                             "options": [
-                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "Автобус", "desc": "Хамгийн бага өртөгтэй", "price": 50000, "images": ["./assets/avtobus.jpg", "./assets/avtobus1.jpg", "./assets/purgon.jpg"] },
+                                { "text": "Хувийн Тээвэр", "desc": "Тав тухтай", "price": 100000, "images": ["./assets/land.jpg", "./assets/land1.jpg", "./assets/land2.jpg"] }
                             ]
                         }
                     ]
