@@ -12,7 +12,7 @@ class HeroSection extends HTMLElement {
         styleLink.setAttribute('href', './css/styles.css');
         this.innerHTML = `
              <header id="hero-section" class="home-main" data-bg-images="assets/back.jpg,assets/back1.jpeg,assets/back2.jpeg"> <section class="destination-overview">
-                <h1 style="font-size: 60px;color: white;">Хөвсгөл Нуур</h1>
+                <h1 style="font-size: 60px;color: white;">Хөвсгөл нуур</h1>
             </header>
          
         `;
