@@ -33,7 +33,6 @@ header {
     transition: 0.6s;
     padding: 1rem 2rem;
 }
-
 header .logo {
     position: relative;
     font-weight: 700;
@@ -90,6 +89,9 @@ header ul li a {
 .navigation-list ul li {
     padding: 10px 30px;
 }
+.theme-button{
+    margin-left: -40px;
+}
 
 header.sticky {
     padding: 5px 10px;
@@ -120,6 +122,10 @@ header.sticky .search-bar input[type="search"] {
 
 .nav-bar ul li a:hover::after {
     color: #ffffff;
+}
+.toggle-image{
+    height: 30px;
+    width: 30px;
 }
 
 .small-image {

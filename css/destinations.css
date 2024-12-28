@@ -14,13 +14,16 @@
     --button-box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
     --background-image: url("assets/back.jpg");
     --primary-border: 1px solid #333;
+    --text-input-color: #333;
+    --text-input-background: #fff;
 }
 
 .dark-mode {
-    --background-color: #000000;
+    --background-color: #4e4c4c;
     --text-color: #ffffff;
     --primary-text-color: #000000;
-  }
+}
+
 /* 
 nav {
     display: flex;
@@ -79,6 +82,7 @@ body {
         height: auto;
     }
 }
+
 /* 
 nav {
     display: flex;
@@ -145,6 +149,7 @@ h1 {
 h4 {
     color: var(--primary-text-color);
 }
+
 main {
     padding: 1.25rem;
     background-color: var(--background-color);
@@ -165,61 +170,93 @@ main {
             font-size: 1rem;
         }
     }
+
     .filter-search-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 20px; /* Space between the two elements */
-        margin: 2% auto; /* Center align */
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        gap: 20px;
+        /* Space between the two elements */
+        margin: 2% auto;
+        /* Center align */
+        flex-wrap: wrap;
+        /* Allow wrapping on smaller screens */
     }
+
     .search-places,
     .radio-container {
-        flex: 1; /* Optional: allows elements to take equal space */
+        flex: 1;
+        /* Optional: allows elements to take equal space */
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
     }
+.content {
+    display: flex; /* Хэсгүүдийг хажуу тийш зэрэгцүүлэх */
+    justify-content: space-between; 
+}
+.container {
+    margin: auto;
+    padding: 0 20px;
+    max-width: 100%;
+    position: relative;
+    /* Make sure the content stays above the blurred background */
+    z-index: 1;
+    /* Ensure the content is on top of the blurred background */
+}
     .search-places {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px; /* Хоорондын зайг багасгах */
-        margin: 2% auto; /* Дээд, доод зайг шахах */
+        gap: 10px;
+        /* Хоорондын зайг багасгах */
+        margin: 2% auto;
+        /* Дээд, доод зайг шахах */
     }
+
     .search-places button {
-        padding: 5px 15px; /* Товчлуурын дотор зайг багасгах */
+        padding: 5px 15px;
+        /* Товчлуурын дотор зайг багасгах */
         font-size: 14px;
-        background-color: #4caf50; /* Ногоон товчлуур */
+        background-color: #4caf50;
+        /* Ногоон товчлуур */
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
     }
-    
+
     .search-places button:hover {
-        background-color: #45a049; /* Хулгана ороход өнгийг өөрчлөх */
+        background-color: #45a049;
+        /* Хулгана ороход өнгийг өөрчлөх */
     }
+
     .search-name {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px; /* Хоорондын зайг багасгах */
-        margin: 2% auto; /* Дээд, доод зайг шахах */
+        gap: 10px;
+        /* Хоорондын зайг багасгах */
+        margin: 2% auto;
+        /* Дээд, доод зайг шахах */
     }
+
     .search-name button {
-        padding: 5px 15px; /* Товчлуурын дотор зайг багасгах */
+        padding: 5px 15px;
+        /* Товчлуурын дотор зайг багасгах */
         font-size: 14px;
-        background-color: #4caf50; /* Ногоон товчлуур */
+        background-color: #4caf50;
+        /* Ногоон товчлуур */
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
     }
-    
+
     .search-name button:hover {
-        background-color: #45a049; /* Хулгана ороход өнгийг өөрчлөх */
+        background-color: #45a049;
+        /* Хулгана ороход өнгийг өөрчлөх */
     }
 
     .radio-container {
@@ -228,171 +265,184 @@ main {
         justify-content: center;
         margin: 1% 0;
         gap: 5px;
-        flex-wrap: nowrap; /* Нэг мөрт байрлуулах */
-    }    
+        flex-wrap: nowrap;
+        /* Нэг мөрт байрлуулах */
+    }
 
-        & input[type="radio"] {
-            display: none;
+    & input[type="radio"] {
+        display: none;
+    }
+
+    & label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background: var(--background-color);
+        /* background: rgba(255, 255, 255, 0.1); */
+        backdrop-filter: blur(5px);
+        border: 1px solid var(--t);
+        transition: all 0.3s ease;
+        font-weight: 500;
+        color: var(--primary-text-color);
+        /* color: #333; */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
+
+        &::before {
+            content: none;
+            /* Or comment out this block */
+        }
+    }
+
+    & input[type="radio"]:checked+label {
+        background: rgba(60, 157, 83, 0.1);
+        border-color: #4c4d4c;
+        color: #4c4d4c;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(60, 157, 83, 0.2);
+
+        &::before {
+            background-color: #4c4d4c;
+            box-shadow: 0 0 5px rgba(60, 157, 83, 0.5);
+            transform: scale(0.7);
+        }
+    }
+
+    @media (max-width: 48rem) {
+        flex-direction: row;
+        align-items: center;
+        margin: 2% 0;
 
         & label {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            padding: 8px 16px;
-            border-radius: 20px;
-            background: var(--background-color);
-            /* background: rgba(255, 255, 255, 0.1); */
-            backdrop-filter: blur(5px);
-            border: 1px solid var(--primary-text-color);
-            transition: all 0.3s ease;
-            font-weight: 500;
-            color: var(--primary-text-color);
-            /* color: #333; */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-            &:hover {
-                background: rgba(255, 255, 255, 0.2);
-                transform: translateY(-2px);
-                box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            }
-
-            &::before {
-                content: none; /* Or comment out this block */
-            }
-        }
-
-        & input[type="radio"]:checked + label {
-            background: rgba(60, 157, 83, 0.1);
-            border-color: #4c4d4c;
-            color: #4c4d4c;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(60, 157, 83, 0.2);
-
-            &::before {
-                background-color: #4c4d4c;
-                box-shadow: 0 0 5px rgba(60, 157, 83, 0.5);
-                transform: scale(0.7);
-            }
-        }
-
-        @media (max-width: 48rem) {
-            flex-direction: row;
-            align-items: center;
-            margin: 2% 0;
-
-            & label {
-                margin: 5px 0;
-                justify-content: center;
-            }
+            margin: 5px 0;
+            justify-content: center;
         }
     }
+}
 
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2% 20%;
+}
+
+.city-grid article {
+    position: relative;
+    perspective: 1000px;
+    height: 250px;
+    /* Fixed height for consistent flipping */
+}
+
+.city-grid .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.city-grid article:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 265px;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background-color: #fff;
+}
+
+.flip-card-back {
+    background-color: #a5bba5;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flip-card-back h4 {
+    margin-bottom: 10px;
+}
+
+.flip-card-back p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+@media (max-width: 48rem) {
     .city-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        margin: 2% 20%;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 2% 10%;
     }
-    
-    .city-grid article {
-        position: relative;
-        perspective: 1000px;
-        height: 250px; /* Fixed height for consistent flipping */
-    }
-    
-    .city-grid .flip-card {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    /* Example width */
+    height: 300px;
+    /* Example height */
+    background-color: lightgray;
+    /* Example background */
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 5%;
+
+    & .pagination-button {
+        background-color: var(--button-bg-color);
+        color: var(--button-color);
+        border: var(--button-border);
+        padding: var(--button-padding);
+        border-radius: var(--button-border-radius);
         cursor: pointer;
-    }
-    
-    .city-grid article:hover .flip-card {
-        transform: rotateY(180deg);
-    }
-    
-    .flip-card-front, .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    
-    .flip-card-front {
-        background-color: #fff;
-    }
-    
-    .flip-card-back {
-        background-color: #a5bba5;
-        color: white;
-        transform: rotateY(180deg);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .flip-card-back h4 {
-        margin-bottom: 10px;
-    }
-    
-    .flip-card-back p {
-        font-size: 0.9em;
-        line-height: 1.4;
-    }
-    
-    @media (max-width: 48rem) {
-        .city-grid {
-            grid-template-columns: repeat(1, 1fr);
-            margin: 2% 10%;
-        }
-    }
-    .box {
-        position: relative;
-        width: 300px; /* Example width */
-        height: 300px; /* Example height */
-        background-color: lightgray; /* Example background */
-      }
-      
-    .pagination {
-        text-align: center;
-        margin-top: 5%;
-
-        & .pagination-button {
-            background-color: var(--button-bg-color);
-            color: var(--button-color);
-            border: var(--button-border);
-            padding: var(--button-padding);
-            border-radius: var(--button-border-radius);
-            cursor: pointer;
-            box-shadow: var(--button-box-shadow);
-        }
-
-        & .pagination-button.active {
-            background-color: var(--text-color);
-            color: var(--button-color);
-        }
-    }
-    .city-grid img {
-        width: 100%;
-        height: 200px; /* Зургийн өндөр 200 пикселээр тогтоосон */
-        object-fit: cover; /* Зургийг контейнерт бүрэн харуулах */
-        border-radius: 8px; /* Буланг зөөлрүүлэх */
-    }
-    
-
-    hr {
-        border: none;
-        border-top: var(--primary-border);
+        box-shadow: var(--button-box-shadow);
     }
 
+    & .pagination-button.active {
+        background-color: var(--text-color);
+        color: var(--button-color);
+    }
+}
+
+.city-grid img {
+    width: 100%;
+    height: 200px;
+    /* Зургийн өндөр 200 пикселээр тогтоосон */
+    object-fit: cover;
+    /* Зургийг контейнерт бүрэн харуулах */
+    border-radius: 8px;
+    /* Буланг зөөлрүүлэх */
+}
+
+
+hr {
+    border: none;
+    border-top: var(--primary-border);
+}
+
+/* 
 
 footer {
     color: var(--text-color);
@@ -430,7 +480,7 @@ footer {
             }
         }
     }
-}
+} */
 
 @media (max-width: 48rem) {
     .home-main {
@@ -482,18 +532,24 @@ footer {
 }
 
 .rating {
-    margin-top: 5px;
-    display: inline-block;
+    /* margin-top: 5px;
+    display: inline-block; */
+    height: 20px;
+    margin-bottom: 20px;
 }
 
 .stars {
-    color: #51504c;  /* Golden color for stars */
+    color: #51504c;
+    /* Golden color for stars */
     font-size: 1.2em;
+    margin-bottom: 20px;
 }
+
 .price {
     position: absolute;
     top: 210px;
-    right: 10px; /* Adjust the position as needed */
+    right: 10px;
+    /* Adjust the position as needed */
     font-weight: bold;
     color: var(--primary-text-color);
 }

@@ -14,24 +14,7 @@ class HighlightSection extends HTMLElement {
 
         // Render the content
         this.shadowRoot.innerHTML = `
-            <style>
-                .highlights-grid {
-                    display: flex;
-                    gap: 1rem;
-                    justify-content: center;
-                }
-                .highlight-card {
-                    background-color: #f9f9f9;
-                    border-radius: 8px;
-                    padding: 1rem;
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                    text-align: center;
-                }
-                iframe {
-                    border-radius: 8px;
-                    border: none;
-                }
-            </style>
+              <link rel="stylesheet" href="../css/styles.css">
             <section>
                 <div class="highlights-grid">
                     <div class="highlight-card">

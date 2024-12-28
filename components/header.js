@@ -14,9 +14,6 @@ class Header extends HTMLElement {
                     <li class="logo-list">
                         <a href="./"><img src="../assets/advent.png" alt="logo" class="small-image"></a>
                     </li>
-                    <li>
-                        <button id="theme-toggle" class="theme-button">Dark Mode</button>
-                    </li>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About us</a></li>
                     <li><a href="./destinations.html">Destinations</a></li>
@@ -40,12 +37,17 @@ class Header extends HTMLElement {
                             <p class="cart-icon-items">items</p>
                         </a>
                     </li>
-                    <li><a href="./favorite.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="70"
+                    <li>
+                    <div id="theme-toggle" class="theme-button">
+                        <img src="../assets/light.png" alt="Theme Toggle" class="toggle-image">
+                        </div>
+                        <a href="./favorite.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="70"
                                 height="30">
                                 <path
                                     d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
                                     fill="none" stroke="currentColor" stroke-width="2" />
-                            </svg></a></li>
+                            </svg></a>
+                    </li>
                 </ul>
             </header>
         `;
@@ -91,11 +93,16 @@ class Header extends HTMLElement {
     setupThemeToggle() {
         const toggleButton = this.querySelector('#theme-toggle');
         const body = document.body;
+        const darkImage = '../assets/dark.png';
+        const lightImage = '../assets/light.png';
+        const themeImage = toggleButton.querySelector('img');
 
         toggleButton.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             const isDarkMode = body.classList.contains('dark-mode');
-            toggleButton.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+
+            // Update the image based on the theme
+            themeImage.src = isDarkMode ? lightImage : darkImage;
 
             // Save the theme preference
             localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
@@ -105,9 +112,12 @@ class Header extends HTMLElement {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             body.classList.add('dark-mode');
-            toggleButton.textContent = 'Switch to Light Mode';
+            themeImage.src = lightImage;
+        } else {
+            themeImage.src = darkImage;
         }
     }
+
 }
 
 window.customElements.define('header-nav', Header);

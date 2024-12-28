@@ -1,3 +1,4 @@
+
 .footer {
     position: relative;
     display: flex;
@@ -7,6 +8,7 @@
     white-space: normal;
     width: 100%;
     overflow: hidden;
+    background-color: #2e2b2b33;
 }
 
 .footer::before {
@@ -90,17 +92,48 @@
 
 @media (max-width: 767px) {
     .footer {
-        flex-wrap: wrap;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap; 
+        justify-content: space-between;
+        text-align: left;
+        white-space: normal;
+        width: 100%;
+        overflow: hidden;
     }
-
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
+    .container {
+        margin: auto;
+        padding: 0 20px;
+        max-width: 100%;
+        position: relative;
+        /* Make sure the content stays above the blurred background */
+        z-index: 1;
+        /* Ensure the content is on top of the blurred background */
     }
-}
-
-@media (max-width: 574px) {
+    
     .footer-col {
         width: 100%;
+        padding: 0 15px;
+        font-size: small;
+    }
+    .footer .content {
+        display: flex; /* Хэсгүүдийг хажуу тийш зэрэгцүүлэх */
+        justify-content: space-between; /* Хоорондын зайг жигд хуваарилах */
+        /* gap: 50px; */
+    }
+    .social-links a {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        /* background-color: #ffffff33;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #0a0a0a;
+        transition: all 0.5s ease; */
     }
 }
+
+
