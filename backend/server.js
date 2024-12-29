@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const tripRoutes = require('./route/travelRoute'); // Travel API маршрутууд
-const orderRoutes = require('./route/orderRoute'); // Order API маршрутууд
 const destinationRoutes = require('./route/destinationRoute'); // Destination API маршрутууд
 
 const app = express();
@@ -14,13 +13,12 @@ app.use(cors({
 }));
 app.use(express.json()); // JSON өгөгдөл боловсруулах
 
-// Routes
+// ali service-g ymar zamaar duudah ve gedgee zaaj ugch bna
 app.use('/api/trips', tripRoutes);
-app.use('/api/orders', orderRoutes);
 app.use('/api/destinations', destinationRoutes);
 
 // Start server
-const PORT = process.env.PORT || 5005.;
+const PORT = process.env.PORT || 5005;
 
 const startServer = (port) => {
     app.listen(port, () => {

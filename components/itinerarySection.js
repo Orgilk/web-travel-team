@@ -27,7 +27,7 @@ class ItinerarySection extends HTMLElement {
         link.setAttribute('href', './css/styles.css'); // Path to your CSS file
         this.shadowRoot.appendChild(link);
     }
-
+    //urdaas data ireegu bol haruulna
     getDefaultItinerary() {
         return [
             { img: 'assets/huwsgul.jpg', title: '1-р өдөр - Хүрэлцэн ирэх', description: 'Хөвсгөл нуурт хүрэлцэн ирж, амрах байранд буудаллана.' },
@@ -35,7 +35,7 @@ class ItinerarySection extends HTMLElement {
             { img: 'assets/huwsg.png', title: '3-р өдөр - Соёлын танилцуулга', description: 'Өрхийн уламжлалт амьдралтай танилцах.' },
         ];
     }
-
+    //damjij irsen datag set hiij haruuj bga
     render() {
         const slidesHTML = this.slides
             .map(slide => `
@@ -62,7 +62,7 @@ class ItinerarySection extends HTMLElement {
             </section>
         `;
     }
-
+    //uragshaa hoishoo guilgehiig handle hiij bga
     addEventListeners() {
         const prevBtn = this.shadowRoot.querySelector('.prev');
         const nextBtn = this.shadowRoot.querySelector('.next');

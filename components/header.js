@@ -18,7 +18,6 @@ class Header extends HTMLElement {
                     <li><a href="./about.html">About us</a></li>
                     <li><a href="./destinations.html">Destinations</a></li>
                     <li><a href="./news.html">News</a></li>
-                    <li><a href="./login.html">Login</a></li>
                     <li class="cart-item">
                         <a href="payment.html">
                             <svg 
@@ -54,13 +53,19 @@ class Header extends HTMLElement {
 
         this.updateCartCount();
         this.setupThemeToggle();
+        window.addEventListener("scroll", () => {
+            var header = this.querySelector("header");
+            if (header) {
+                header.classList.toggle("sticky", window.scrollY > 500);
+            }
+        });
     }
-
+    //state ashiglaj kart dotorh item-n toog real time haruulna
     setState(newState) {
         this.state = { ...this.state, ...newState };
         this.updateCartCount();
     }
-
+    //cart dotor bga item-n toog baazaas backend-r damjuulj avch haruulna
     async updateCartCount() {
         try {
             const response = await fetch('http://localhost:5005/api/trips', {
@@ -77,7 +82,7 @@ class Header extends HTMLElement {
             const data = await response.json();
             const cartItemCountElement = this.querySelector('#cartItemCount');
             const cartIcon = this.querySelector('#cartIcon');
-
+            //cart dotorh item-n toonoos hamaarch kart icon-i ungu uurchlugduhiig state ashiglaj shiidsen
             if (cartItemCountElement) {
                 const count = data.length;
                 this.setState({ cartItemCount: count });
@@ -90,6 +95,7 @@ class Header extends HTMLElement {
         }
     }
 
+    // darl light icon-g switch hiij bga heseg
     setupThemeToggle() {
         const toggleButton = this.querySelector('#theme-toggle');
         const body = document.body;

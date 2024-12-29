@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Fetch the JSON file
+    // json file-s filter-n medeelliig avchirch bga heseg
     fetch("./filters.json")
         .then(response => response.json())
         .then(data => {
             const filterContainer = document.getElementById("filterContainer");
 
-            // Generate radio buttons from JSON
+            //une bolon bairshliin neriig radio button bolgoj uusgej bga heseg
             data.radioContainer.forEach(filter => {
                 // Create input element
                 const input = document.createElement("input");
@@ -25,18 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 filterContainer.appendChild(label);
             });
 
-            // Attach event listeners after radio buttons are created
+            //deer uusgesen radio button-udin ard ni ymar uildel hiigdehiig zaaj ugch bga
             const radioButtons = document.querySelectorAll('input[name="sort"], input[name="price"]');
             const searchNameInput = document.getElementById('searchName');
             const searchPlacesInput = document.getElementById('searchPlaces');
-
+            //search name input-n utgiig sonsoj bn --ene ni baazaas medeelel filter hiij bga
             searchNameInput.addEventListener('input', async () => {
                 const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || 'All';
                 const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || 'All';
                 const selectedRating = document.getElementById('ratingFilter').value || 'All';
+                //ymar negen uildel hiigdeh burt filter hiih uildel ajillana
                 await renderArticles(selectedRegion, searchNameInput.value, searchPlacesInput.value, selectedPrice, selectedRating);
             });
-            
+            //search place input-n utgiig sonsoj bn  
             searchPlacesInput.addEventListener('input', async () => {
                 const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || 'All';
                 const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || 'All';
@@ -70,10 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error loading filters:", error));
 });
 
+//gazruudiin medeelliig baazaas avch irj bga heseg
 const fetchDestinations = async (filterRating = 'All', searchName = '') => {
     console.log("filterrating: ", filterRating)
     try {
-        // Construct the URL with query parameters
+        // baazaas ugugdul haihdaa rating bolon name-r haina
         const url = new URL('http://localhost:5005/api/destinations');
         if (filterRating !== 'All') {
             url.searchParams.append('rating', filterRating);
@@ -106,11 +108,11 @@ const renderArticles = async (filterRegion = 'All', searchName = '', searchPlace
     const cityGrid = document.querySelector('.city-grid');
     cityGrid.innerHTML = ''; // Clear grid
 
-    // Fetch destinations data
+    // baazaas medeelel avchirch bga
     const data = await fetchDestinations(filterRating, searchPlaces);
 
     const [minPrice, maxPrice] = getPriceRange(filterPrice); // Get price range for filtering
-
+    //baazaas irsen data deerees hailt hiij bga
     const filteredData = data.filter(item => {
         const matchesRegion = filterRegion === 'All' || item.region === filterRegion;
         const matchesName = searchName === 'All' || item.name.toLowerCase().includes(searchName.toLowerCase());
@@ -118,7 +120,7 @@ const renderArticles = async (filterRegion = 'All', searchName = '', searchPlace
         const matchesRating = filterRating === 'All' || item.rating >= parseInt(filterRating); // Compare with the rating
         return matchesRegion && matchesPrice && matchesName && matchesRating;
     });
-
+    // irsen gazruudiin medeelliig urj bga heseg
     filteredData.forEach(item => {
         const article = document.createElement('article');
         article.setAttribute('data-region', item.region);
@@ -157,6 +159,7 @@ const renderArticles = async (filterRegion = 'All', searchName = '', searchPlace
     });
 };
 
+//gazriig favorite ru nemehed ashiglana
 const addToFavorites = (destination) => {
     // Get the current favorites from localStorage or an empty array if none exists
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];

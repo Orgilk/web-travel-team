@@ -13,7 +13,7 @@ class BookingSection extends HTMLElement {
 
         this.addEventListeners();
     }
-
+    //json data ashiglaj zahialgiin form-n datag buh heseg neg burchlen bichihgui, component-n attribut uurchlugduhud wc-dee uurchlult ni haragdana
     get jsonData() {
         return {
             "travelDirections": [
@@ -372,6 +372,7 @@ class BookingSection extends HTMLElement {
         };
     }
 
+    //songoltiin datag duudaj avchirch bga heseg
     async loadOptionsData() {
         try {
             this.render(); // Render the component after the data is loaded
@@ -382,8 +383,9 @@ class BookingSection extends HTMLElement {
     }
 
     render() {
-        const direction = this.getAttribute('direction'); // Get the "direction" attribute
-        console.log("direction: ", direction)
+        //direction medeelliig 9n gazraas damjuulj ug attributa-a component deeree haruulj bga.
+        const direction = this.getAttribute('direction');
+        //irsen direction buyu huvsgul gesen datagaaraa json-oso zuvhun ug gazriin medelliig haruulahad ashiglahad
         const selectedDirection = this.jsonData.travelDirections.find(item => item.direction === direction); // Find the matching direction
         if (!selectedDirection) {
             console.error('Direction not found');
@@ -391,7 +393,7 @@ class BookingSection extends HTMLElement {
         }
 
         this.optionsData = selectedDirection;
-
+        //songogdson gazriin medeelleer html-e fill hiij bga
         this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="./css/styles.css">
               <style>
@@ -434,7 +436,7 @@ class BookingSection extends HTMLElement {
             </section>
         `;
     }
-
+    //booking section hesgiig beldej uusgej bn
     createBookingSection(title, type, options) {
         return `
             <div class="booking-section">
@@ -457,7 +459,7 @@ class BookingSection extends HTMLElement {
         `;
     }
 
-
+    // hunii too oruulj bga hesgiin datag avah
     attachEventListeners() {
         // Attach event listeners for option cards dynamically
         this.shadowRoot.querySelectorAll('.option-card').forEach(card => {
@@ -471,7 +473,7 @@ class BookingSection extends HTMLElement {
         // Attach event listener for booking button
         this.shadowRoot.getElementById('bookBtn').addEventListener('click', () => this.processBooking());
     }
-
+    //songoltuud hiisen datag avch irj bga heseg
     handleOptionCardClick(event) {
         const card = event.currentTarget;
         const type = card.getAttribute('data-type');
@@ -495,7 +497,7 @@ class BookingSection extends HTMLElement {
         // Recalculate the total price
         this.calculateTotalPrice();
     }
-
+    //gurvan shirheg zurgiig haruulah haruulahguig shiidej bga
     addEventListeners() {
         // Select the option card and toggle visibility of .booking-selection
         const card = this.shadowRoot.querySelector('.option-card');
@@ -507,7 +509,7 @@ class BookingSection extends HTMLElement {
             });
         }
     }
-
+   //kartiin toog baazaas avchraad update hiij bga heseg - end yagaa dahiad duudaj bga ve geheer baaz ru hadgalj bga ustgaj bga uildliig hiij bga uchraas kart shinechleh heregtei
     async updateCartCount() {
         try {
             const response = await fetch('http://localhost:5005/api/trips', {
@@ -530,7 +532,7 @@ class BookingSection extends HTMLElement {
             console.error('API call failed:', error.message);
         }
     }
-
+    // hunii toonii uurchlugdsun medeellig tur zuur hadgalaad total price bodoj bga
     updatePeopleCount() {
         const adultCount = Math.max(parseInt(this.shadowRoot.getElementById('adult-count').value) || 0, 0);
         const childCount = Math.max(parseInt(this.shadowRoot.getElementById('child-count').value) || 0, 0);
@@ -550,7 +552,7 @@ class BookingSection extends HTMLElement {
     }
 
 
-
+    //zahialga hiih heseg
     processBooking() {
         const direction = this.getAttribute('direction'); 
         let bookingList = JSON.parse(localStorage.getItem('bookingList')) || [];
@@ -575,8 +577,10 @@ class BookingSection extends HTMLElement {
         };
 
         bookingList.push(bookingDetails);
+        //local storage ru hadgalj bga 
         localStorage.setItem('bookingList', JSON.stringify(bookingList));
         alert('Захиалга амжилттай!');
+        // baazru api duudaj zahialgiin medeelliig hadgalj bga
         fetch('http://localhost:5005/api/trips', {
             method: 'POST',
             headers: {

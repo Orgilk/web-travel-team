@@ -3,8 +3,10 @@ const { getTrips, addTrip, deleteTrip } = require('../controller/travelControlle
 
 const router = express.Router();
 
-// Define routes
-router.get('/', getTrips);  // Fetch all trips
-router.post('/', addTrip); // Add a new trip
+//order-n medeelel avchrah zam
+router.get('/', getTrips); 
+// order uusgeh zam
+router.post('/', addTrip); 
+// order ustgah zam
 router.delete('/', deleteTrip); 
 module.exports = router;

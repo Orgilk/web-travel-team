@@ -30,48 +30,7 @@ paths:
                     description:
                       type: string
                       description: Details about the trip
-  /api/orders:
-    get:
-      summary: Get all orders
-      description: Retrieve a list of all orders.
-      responses:
-        '200':
-          description: A list of orders
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                      description: The order ID
-                    tripId:
-                      type: integer
-                      description: The ID of the associated trip
-                    quantity:
-                      type: integer
-                      description: The quantity of orders
-    post:
-      summary: Create a new order
-      description: Place a new order for a trip.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                tripId:
-                  type: integer
-                  description: The ID of the trip to order
-                quantity:
-                  type: integer
-                  description: The number of items to order
-      responses:
-        '201':
-          description: Order created successfully
+  
   /api/destinations:
     get:
       summary: Get all destinations

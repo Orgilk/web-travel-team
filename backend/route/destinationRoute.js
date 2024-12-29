@@ -3,6 +3,6 @@ const {  getDestinations } = require('../controller/travelController');
 
 const router = express.Router();
 
-// Define routes
-router.get('/', getDestinations); // get destinations
+// destination-i medeelliig avchrah service-e route-tei holboj bn
+router.get('/', getDestinations); 
 module.exports = router;

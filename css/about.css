@@ -186,6 +186,24 @@ body {
 .team-member p {
     color: #666;
 }
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+        background-color: rgb(238, 229, 229);
+    }
+    50% {
+        transform: translateX(200px);
+        background-color: rgb(151, 151, 236);
+    }
+    100% {
+        transform: translateX(0);
+        background-color: rgb(230, 241, 230);
+    }
+}
+.animated-box {
+    animation: moveRight 10s ease-in-out 1s infinite alternate;
+}
+
 
 @media (max-width: 768px) {
 

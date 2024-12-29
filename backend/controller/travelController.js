@@ -1,6 +1,6 @@
 const pool = require('../config/db');
 
-// Fetch all trips
+// zahialgiin medeelliig baazaas avchrah
 const getTrips = async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM orders');
@@ -11,6 +11,7 @@ const getTrips = async (req, res) => {
     }
 };
 
+//destination-i medeelliig baazaas avchrah
 const getDestinations = async (req, res) => {
     try {
         const { rating, name } = req.query;
@@ -41,7 +42,7 @@ const getDestinations = async (req, res) => {
 };
 
 
-// Add a new trip
+//zahialgiig baaz ru hadgalah
 const addTrip = async (req, res) => {
     const { duration, hotel, meal, transport, adults, children, sumPrice, totalPrice, destination } = req.body;
     console.log("body: ", req.body)
@@ -57,7 +58,8 @@ const addTrip = async (req, res) => {
         res.status(500).send('Server Error');
     }
 };
-// delete trip
+
+//zahialga ustgah
 const deleteTrip = async (req, res) => {
     const { trip_id } = req.body; // Assuming you are passing the trip ID in the request body
     
