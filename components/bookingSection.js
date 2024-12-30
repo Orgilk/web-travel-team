@@ -22,11 +22,11 @@ class BookingSection extends HTMLElement {
                     "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d344495.5120359433!2d105.67448804439742!3d47.580021813762855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x5d97378546aaaaab%3A0xf5caa7e8c8d99888!2zS2h1c3RhaSBNb3VudGFpbnMgUm9hZCDQpdGD0YHRgtCw0LnQvSDQndGD0YDRg9GDLCBBcmdhbGFudA!3m2!1d47.7638453!2d105.87903469999999!4m5!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune%20%C3%96mn%C3%B6govi!3m2!1d43.7413364!2d102.3348999!5e0!3m2!1sen!2smn!4v1735549715549!5m2!1sen!2smn",
                     "bookingSections": [
                         {
-                            "title": "📅 Аяллын Хугацаа K",
+                            "title": "📅 Аяллын Хугацаа",
                             "id": "duration",
                             "options": [
-                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000 },
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000}
                             ]
                         },
                         {
@@ -61,11 +61,11 @@ class BookingSection extends HTMLElement {
                     "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d540978.3158657287!2d93.03970271611166!3d49.02575313254163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x5d464605dc624d57%3A0x949c1a4c9efa53f6!2sKhyargas%20Lake!3m2!1d49.1974631!2d93.2686011!4m5!1s0x36299def8a85d503%3A0x9e3036957f8f8260!2sKhongor%20Sand%20Dune%20%C3%96mn%C3%B6govi!3m2!1d43.7413364!2d102.3348999!5e0!3m2!1sen!2smn!4v1735549911910!5m2!1sen!2smn",
                     "bookingSections": [
                         {
-                            "title": "📅 Аяллын Хугацаа hyrgas",
+                            "title": "📅 Аяллын Хугацаа",
                             "id": "duration",
                             "options": [
-                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] },
-                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000, "images": ["./assets/huwsgul.jpg", "./assets/huwsgul.jpg", "./assets/huwsgul.jpg"] }
+                                { "text": "3 өдөр 2 шөнө", "desc": "Үндсэн хөтөлбөр", "price": 300000},
+                                { "text": "5 өдөр 4 шөнө", "desc": "Өргөтгөсөн хөтөлбөр", "price": 250000 }
                             ]
                         },
                         {
@@ -189,8 +189,8 @@ class BookingSection extends HTMLElement {
                             "title": "🏨 Байрны Сонголт",
                             "id": "hotel",
                             "options": [
-                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000},
-                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000 },
+                                { "text": "Стандарт Байр", "desc": "Хамгийн бага өртөгтэй", "price": 50000,"images": ["./assets/ger.jpg", "./assets/ger.jpg", "./assets/ger.jpg"]},
+                                { "text": "Делюкс Байр", "desc": "Тав тухтай өрөө", "price": 100000, "images": ["./assets/standart.jpg", "./assets/standart1.jpg", "./assets/standart3.jpg"] },
                                 { "text": "VIP Байр", "desc": "Бүх төрлийн үйлчилгээтэй", "price": 150000, "images": ["./assets/delux.jpg", "./assets/delux1.jpg", "./assets/delux.jpg"] }
                             ]
                         },
