@@ -1,7 +1,7 @@
 [
     {
-        "region": "Lake",
-        "name": "Huwsgul",
+        "region": "Нуур",
+        "name": "Хөвсгөл",
         "image": "assets/huwsgul.jpg",
         "link": "huvsgul.html",
         "rating": 5,
@@ -9,8 +9,8 @@
         "description": "Хөвсгөл нуур буюу Хөвсгөл далай нь Монгол улсын хойд хэсэгт Хөвсгөл аймагт далайн түвшнээс 1645 метр өндөрт оршдог цэнгэг устай нуур. Энэ нуур нь Монголын хамгийн их эзлэхүүнтэй, хамгийн гүн нуур юм."
     },
     {
-        "region": "Khangai",
-        "name": "Altai tavan bogd",
+        "region": "Хангай",
+        "name": "Алтай таван богд",
         "image": "assets/AltaiTavanBogd.jpg",
         "link": "pages/Altai.html",
         "rating": 3.5,
@@ -18,8 +18,8 @@
         "description": "Монгол Алтайн нурууны Алтай Таван Богд уул нь Монгол улсын хамгийн өндөр уулс юм. Энэ ч утгаараа Монгол орны дээвэр хэмээгддэг. Таван Богд уул нь Баян-Өлгий аймгийн Улаанхус сумд оршдог."
     },
     {
-        "region": "Lake",
-        "name": "Hyrgas",
+        "region": "Нуур",
+        "name": "Хяргас нуур",
         "image": "assets/hyrgas.jpg",
         "link": "hyrgas.html",
         "rating": 3,

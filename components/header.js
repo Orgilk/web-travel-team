@@ -14,10 +14,10 @@ class Header extends HTMLElement {
                     <li class="logo-list">
                         <a href="./"><img src="../assets/advent.png" alt="logo" class="small-image"></a>
                     </li>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About us</a></li>
-                    <li><a href="./destinations.html">Destinations</a></li>
-                    <li><a href="./news.html">News</a></li>
+                    <li><a href="./index.html">Нүүр</a></li>
+                    <li><a href="./about.html">Бидний тухай</a></li>
+                    <li><a href="./destinations.html">Аялалууд</a></li>
+                    <li><a href="./news.html">Мэдээ</a></li>
                     <li class="cart-item">
                         <a href="payment.html">
                             <svg 
@@ -33,7 +33,7 @@ class Header extends HTMLElement {
                                 </path>
                             </svg>
                             <span id="cartItemCount" class="cart-icon-text">0</span> 
-                            <p class="cart-icon-items">items</p>
+                            <p class="cart-icon-items">бараа</p>
                         </a>
                     </li>
                     <li>

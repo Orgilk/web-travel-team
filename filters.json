@@ -5,37 +5,37 @@
         "name": "sort",
         "value": "All",
         "checked": true,
-        "label": "All"
+        "label": "Бүгд"
       },
       {
         "id": "sort-Lake",
         "name": "sort",
-        "value": "Lake",
-        "label": "Lake"
+        "value": "Нуур",
+        "label": "Нуур"
       },
       {
         "id": "sort-Khangai",
         "name": "sort",
-        "value": "Khangai",
-        "label": "Khangai"
+        "value": "Хангай",
+        "label": "Хангай"
       },
       {
         "id": "sort-Gobi",
         "name": "sort",
-        "value": "Gobi",
-        "label": "Gobi"
+        "value": "Говь",
+        "label": "Говь"
       },
       {
         "id": "sort-Steppe",
         "name": "sort",
-        "value": "Steppe",
-        "label": "Steppe"
+        "value": "Хээр",
+        "label": "Хээр"
       },
       {
         "id": "price-all",
         "name": "price",
         "value": "All",
-        "label": "All price"
+        "label": "Бүх үнэ"
       },
       {
         "id": "price-0-150000",
