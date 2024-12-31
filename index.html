@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="/manifest.json?$modena=vue-personal-page">
+    <link rel="icon" type="image/png" href="/favicon.png?$modena=vue-personal-page">
     <script type="module" src="./components/header.js" defer></script>
     <script type="module" src="./components/footer.js" defer></script>
 </head>
@@ -103,7 +104,7 @@
 
 
                 </div>
-                <!-- ... existing code ... -->
+
 
 
 
@@ -170,11 +171,12 @@
 
 <script src="/{display_mode}/scripts/main.js"></script>
 
-<script>
-    // Register service worker
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-            navigator.serviceWorker.register("/{display_mode}/sw.js", { scope: '/{display_mode}/' });
+<script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js?$modena=vue-personal-page', {
+                scope: '/'
+            });
         });
     }
 </script>

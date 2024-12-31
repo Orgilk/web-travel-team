@@ -1334,7 +1334,7 @@ main {
 }
 
 .carousel_caption-1 p {
-    margin-top: 300px;
+    margin-top: 200px;
     color: #ffffff;
     font-size: 1rem;
     font-weight: 300;
@@ -1668,3 +1668,30 @@ ul {
         justify-content: center;
     }
 }
+
+.learn-more {
+    display: inline-block;       /* Makes the link behave like a button */
+    background-color: #7dd280;  /* Green background */
+    color: white;               /* White text */
+    padding: 10px 20px;         /* Add padding for a button-like appearance */
+    font-size: 14px;            /* Set font size */
+    text-decoration: none;      /* Remove underline */
+    border: 2px solid #7dd280;  /* Green border */
+    border-radius: 5px;         /* Slightly rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    cursor: pointer;            /* Pointer cursor on hover */
+}
+
+.learn-more:hover {
+    background-color: white;    /* Invert background and text color on hover */
+    color: #7dd280;             /* Green text */
+    border-color: #7dd280;      /* Green border */
+}
+
+.learn-more:active {
+    background-color: #3e8e41;  /* Darker green when clicked */
+    color: white;               /* White text */
+}
+
+
+
