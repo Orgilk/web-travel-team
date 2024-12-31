@@ -138,8 +138,6 @@
     <hr>
     <footer-component></footer-component>
 
-
-    <script src="main.js"></script>
     <script>
         window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
@@ -163,30 +161,23 @@
           showSlide(currentIndex);
       }
   
-      // Initial slide
       showSlide(currentIndex);
-  
-      // Automatic slide transition
       setInterval(nextSlide, 5000);
   });
   
   
       </script>
 
+<script src="/{display_mode}/scripts/main.js"></script>
+
 <script>
+    // Register service worker
     if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("/service-worker.js")
-          .then((registration) => {
-            console.log("Service Worker registered with scope:", registration.scope);
-          })
-          .catch((error) => {
-            console.error("Service Worker registration failed:", error);
-          });
-      });
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/{display_mode}/sw.js", { scope: '/{display_mode}/' });
+        });
     }
-  </script>
+</script>
 </body>
 
 </html>
