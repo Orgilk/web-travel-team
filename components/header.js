@@ -107,14 +107,10 @@ class Header extends HTMLElement {
             body.classList.toggle('dark-mode');
             const isDarkMode = body.classList.contains('dark-mode');
 
-            // Update the image based on the theme
             themeImage.src = isDarkMode ? lightImage : darkImage;
-
-            // Save the theme preference
             localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
         });
 
-        // Load the saved theme preference on page load
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             body.classList.add('dark-mode');

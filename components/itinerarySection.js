@@ -7,10 +7,8 @@ class ItinerarySection extends HTMLElement {
     }
 
     connectedCallback() {
-        // Import external CSS file
         this.loadStyles();
 
-        // Retrieve JSON-like data
         const itineraryData = this.getAttribute('data-days') 
             ? JSON.parse(this.getAttribute('data-days')) 
             : this.getDefaultItinerary();

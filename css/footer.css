@@ -108,9 +108,7 @@
         padding: 0 20px;
         max-width: 100%;
         position: relative;
-        /* Make sure the content stays above the blurred background */
         z-index: 1;
-        /* Ensure the content is on top of the blurred background */
     }
     
     .footer-col {

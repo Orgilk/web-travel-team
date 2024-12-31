@@ -134,7 +134,7 @@ const renderArticles = async (filterRegion = 'All', searchName = '', searchPlace
                     <div class="rating" title="${item.rating} out of 5 stars">
                         <span class="stars">${stars}</span>
                     </div>
-                    <p>Price: <span class="price">${item.price}</span></p>
+                    <p>Үнэ: <span class="price">${item.price}</span></p>
                 </div>
                 <div class="flip-card-back">
                     <h4>${item.name}</h4>
@@ -168,8 +168,8 @@ const addToFavorites = (destination) => {
     if (!favorites.some(fav => fav.name === destination.name)) {
         favorites.push(destination); // Add to favorites
         localStorage.setItem('favorites', JSON.stringify(favorites)); // Save to localStorage
-        alert(`${destination.name} has been added to your favorites!`);
+        alert(`${destination.name} аялал дуртай газрын тоонд нэмэгдлээ`);
     } else {
-        alert(`${destination.name} is already in your favorites.`);
+        alert(`${destination.name} аль хэдийн дуртай газрын тоонд байна`);
     }
 };

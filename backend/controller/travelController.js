@@ -19,13 +19,13 @@ const getDestinations = async (req, res) => {
         let query = 'SELECT * FROM destinations';
         const queryParams = [];
 
-        // Add WHERE clause for rating
+    //rating
         if (rating) {
             queryParams.push(rating);
             query += ` WHERE rating >= $${queryParams.length}`;
         }
 
-        // Add WHERE clause for name
+        // name
         if (name) {
             queryParams.push(`%${name}%`);
             query += queryParams.length === 1 
@@ -61,23 +61,20 @@ const addTrip = async (req, res) => {
 
 //zahialga ustgah
 const deleteTrip = async (req, res) => {
-    const { trip_id } = req.body; // Assuming you are passing the trip ID in the request body
+    const { trip_id } = req.body; 
     
     console.log("Deleting trip with ID:", trip_id);
 
     try {
-        // Query to delete the trip with the given ID
         const result = await pool.query(
-            `DELETE FROM orders WHERE id = $1 RETURNING *`, // Assuming "id" is the unique column for trip in your "orders" table
+            `DELETE FROM orders WHERE id = $1 RETURNING *`,
             [trip_id]
         );
 
-        // Check if a trip was deleted
         if (result.rowCount === 0) {
             return res.status(404).json({ message: 'Trip not found' });
         }
 
-        // Respond with the deleted trip data (optional)
         res.status(200).json({ message: 'Trip deleted successfully', deletedTrip: result.rows[0] });
     } catch (err) {
         console.error('Error deleting trip:', err.message);

@@ -24,13 +24,10 @@ class ReviewsSection extends HTMLElement {
         this.init();
     }
 
-    // Load comments from localStorage
     loadComments(reviewsGrid) {
         const comments = JSON.parse(localStorage.getItem('comments')) || [];
         comments.forEach(comment => this.addCommentToGrid(comment.name, comment.text));
     }
-
-    // Add a comment to the grid
     addCommentToGrid(name, text) {
         const reviewsGrid = this.querySelector('.reviews-grid');
         const newReview = document.createElement('div');
@@ -41,7 +38,6 @@ class ReviewsSection extends HTMLElement {
             <button class="remove-btn" style="background-color: orange; color: white; border: none; padding: 0.5rem; cursor: pointer; border-radius: 4px;">Устгах</button>
         `;
 
-        // Remove button functionality
         const removeBtn = newReview.querySelector('.remove-btn');
         removeBtn.addEventListener('click', () => {
             reviewsGrid.removeChild(newReview);
@@ -50,7 +46,6 @@ class ReviewsSection extends HTMLElement {
         reviewsGrid.appendChild(newReview);
     }
 
-    // Remove a comment from localStorage
     removeComment(name, text) {
         const comments = JSON.parse(localStorage.getItem('comments')) || [];
         const updatedComments = comments.filter(comment => comment.name !== name || comment.text !== text);
@@ -64,18 +59,15 @@ class ReviewsSection extends HTMLElement {
         const commentError = this.querySelector('#comment-error');
         const reviewsGrid = this.querySelector('.reviews-grid');
 
-        // Load comments from localStorage
         this.loadComments(reviewsGrid);
 
-        // Save comments to localStorage
         const saveComment = (name, text) => {
             const comments = JSON.parse(localStorage.getItem('comments')) || [];
             comments.push({ name, text });
             localStorage.setItem('comments', JSON.stringify(comments));
-            console.log('Comments saved: ', comments); // Debugging line
+            console.log('Comments saved: ', comments); 
         };
 
-        // Handle form submission
         commentForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const nameText = nameBox.value.trim();
@@ -93,5 +85,4 @@ class ReviewsSection extends HTMLElement {
     }
 }
 
-// Define the custom element
 window.customElements.define('reviews-section', ReviewsSection);

@@ -3,7 +3,7 @@ class BookingSection extends HTMLElement {
         super();
         this.selectedOptions = { duration: 0, hotel: 0, meal: 0, transport: 0 };
         this.peopleCount = { adults: 0, children: 0 };
-        this.attachShadow({ mode: 'open' }); // Encapsulated Shadow DOM
+        this.attachShadow({ mode: 'open' }); 
     }
 
     connectedCallback() {
@@ -375,7 +375,7 @@ class BookingSection extends HTMLElement {
     //songoltiin datag duudaj avchirch bga heseg
     async loadOptionsData() {
         try {
-            this.render(); // Render the component after the data is loaded
+            this.render(); 
             this.attachEventListeners();
         } catch (error) {
             console.error('Error loading JSON data:', error);
@@ -461,16 +461,12 @@ class BookingSection extends HTMLElement {
 
     // hunii too oruulj bga hesgiin datag avah
     attachEventListeners() {
-        // Attach event listeners for option cards dynamically
         this.shadowRoot.querySelectorAll('.option-card').forEach(card => {
             card.addEventListener('click', event => this.handleOptionCardClick(event));
         });
 
-        // Attach event listeners for people count inputs
         this.shadowRoot.getElementById('adult-count').addEventListener('input', () => this.updatePeopleCount());
         this.shadowRoot.getElementById('child-count').addEventListener('input', () => this.updatePeopleCount());
-
-        // Attach event listener for booking button
         this.shadowRoot.getElementById('bookBtn').addEventListener('click', () => this.processBooking());
     }
     //songoltuud hiisen datag avch irj bga heseg
@@ -479,27 +475,22 @@ class BookingSection extends HTMLElement {
         const type = card.getAttribute('data-type');
         const price = parseInt(card.getAttribute('data-price')) || 0;
 
-        // Deselect other cards of the same type
         this.shadowRoot.querySelectorAll(`.option-card[data-type="${type}"]`).forEach(otherCard => {
             otherCard.classList.remove('selected');
             const imgSection = otherCard.querySelector('.booking-selection');
-            if (imgSection) imgSection.style.display = 'none'; // Hide images for deselected cards
+            if (imgSection) imgSection.style.display = 'none'; 
         });
 
-        // Select the clicked card
         card.classList.add('selected');
         const imgSection = card.querySelector('.booking-selection');
-        if (imgSection) imgSection.style.display = 'block'; // Show images for the selected card
+        if (imgSection) imgSection.style.display = 'block'; 
 
-        // Update selected options
         this.selectedOptions[type] = price;
 
-        // Recalculate the total price
         this.calculateTotalPrice();
     }
     //gurvan shirheg zurgiig haruulah haruulahguig shiidej bga
     addEventListeners() {
-        // Select the option card and toggle visibility of .booking-selection
         const card = this.shadowRoot.querySelector('.option-card');
         const imgSection = this.shadowRoot.querySelector('.booking-selection');
         if (card && imgSection) {
@@ -586,22 +577,20 @@ class BookingSection extends HTMLElement {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(bookingDetails)  // Convert the bookingDetails object to JSON format
+            body: JSON.stringify(bookingDetails) 
         })
             .then(response => response.json())
             .then(data => {
-                console.log('Trip added:', data);
-                alert('Your booking has been successfully added!');
+                console.log('Захиалга нэмэгдлээ:', data);
+                alert('Захиалга амжилттай нэмэгдлээ!');
                 this.updateCartCount();
             })
             .catch(error => {
                 console.error('Error:', error);
                 alert('An error occurred while saving the booking.');
             });
-        // Save the updated bookingList to localStorage
         localStorage.setItem('bookingList', JSON.stringify(bookingList));
         this.updateCartCount();
-        // window.location.href = '/order-summary';
     }
 
 }

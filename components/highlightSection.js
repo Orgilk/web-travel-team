@@ -5,14 +5,12 @@ class HighlightSection extends HTMLElement {
     }
 
     connectedCallback() {
-        // Retrieve attributes for dynamic content
+   
         const title1 = this.getAttribute('title1') || 'Default Title 1';
         const desc1 = this.getAttribute('desc1') || 'Default description 1';
         const title2 = this.getAttribute('title2') || 'Default Title 2';
         const desc2 = this.getAttribute('desc2') || 'Default description 2';
         const iframeSrc = this.getAttribute('iframe-src') || '';
-
-        // Render the content
         this.shadowRoot.innerHTML = `
               <link rel="stylesheet" href="../css/styles.css">
             <section>
@@ -38,5 +36,4 @@ class HighlightSection extends HTMLElement {
     }
 }
 
-// Define the custom element
 customElements.define('highlight-section', HighlightSection);
