@@ -135,27 +135,21 @@
     <div class="container">
         <h1>Таны дуртай газрууд</h1>
 
-        <!-- Booking list section -->
         <div id="favorites-list"></div>
 
-        <!-- <div class="button-container">
-            <button class="payment-button" onclick="processPayment()">Баталгаажуулах</button>
-            <button class="back-button" onclick="window.history.back()">Буцах</button>
-        </div> -->
     </div>
 
     <script>
         window.onload = function () {
-            // Retrieve the favorite destinations from localStorage
+            //  localStorage-s aylaluud haruulna
             const favoriteDestinations = JSON.parse(localStorage.getItem('favorites')) || [];
 
-            // If there are no favorites, display a message
             if (favoriteDestinations.length === 0) {
                 document.getElementById('favorites-list').innerHTML = '<p>Таны дуртай газрууд байхгүй байна.</p>';
                 return;
             }
 
-            // Display each favorite destination
+            //  destination haruulah
             const favoritesListContainer = document.getElementById('favorites-list');
             favoriteDestinations.forEach((destination, index) => {
                 const destinationElement = document.createElement('div');
@@ -174,19 +168,16 @@
             });
         };
 
-        // Function to remove a destination from the favorites list
+        // remove destination
         function removeFromFavorites(index) {
             const favoriteDestinations = JSON.parse(localStorage.getItem('favorites')) || [];
-            favoriteDestinations.splice(index, 1); // Remove the destination at the given index
+            favoriteDestinations.splice(index, 1); 
 
-            // Save the updated list back to localStorage
             localStorage.setItem('favorites', JSON.stringify(favoriteDestinations));
 
-            // Reload the page to reflect changes
             window.location.reload();
         }
 
-        // Function to handle the payment process (mocked)
         function processPayment() {
             alert("Төлбөр амжилттай хийгдлээ!");
         }

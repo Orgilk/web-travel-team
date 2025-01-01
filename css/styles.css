@@ -7,8 +7,16 @@
     --background-light: #f7fafc;
     --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition-speed: 0.3s;
-}
-
+  } 
+ body.dark-mode {
+    --primary-color: #90cdf4;
+    --secondary-color: #63b3ed;
+    --accent-color: #ed8936;
+    --text-color: white;
+    --light-text: white;
+    --background-light: #2d3748;
+    --card-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  }
 * {
     margin: 0;
     padding: 0;
@@ -43,13 +51,6 @@ header.sticky .cart img {
     height: 80px;
 }
 
-/* #hero-section {
-      transition: background-image 0.5s ease-in-out;
-  }
-  
-  #hero-section.animate-bg {
-      opacity: 0.9; 
-  } */
 .animate-bg {
     transition: background-image 0.5s ease-in-out;
 }
@@ -130,12 +131,6 @@ header.sticky .cart img {
     position: relative;
     z-index: 1;
 }
-
-/* .hero-section h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  } */
 
 /* Destination */
 .destination-overview {
@@ -297,13 +292,7 @@ header.sticky .cart img {
 
 .map {
     margin-top: 50px;
-    /* max-width: 400px; */
-    /* margin: 0 auto; */
-    /* background: white; */
-    /* padding: 30px; */
     border-radius: 10px;
-    /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
-    /* max-height: ; */
 }
 
 /* Reviews Section */
@@ -390,17 +379,13 @@ header.sticky .cart img {
     padding: 0 200px;
     max-width: 100%;
     position: relative;
-    /* Make sure the content stays above the blurred background */
     z-index: 1;
-    /* Ensure the content is on top of the blurred background */
 }
 
 .content {
     position: relative;
     z-index: 1;
-    /* Above the background */
     color: #100f0f;
-    /* Adjust text color for visibility */
     text-align: center;
     padding: 20px;
     display: flex;
@@ -415,30 +400,22 @@ header.sticky .cart img {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-height: 80vh;
-    /* Set the maximum height to 80% of the viewport */
-    overflow-y: auto;
-    /* Enable vertical scrolling */
+    overflow-y: auto;/
     margin-top: 20px;
     width: 100%;
 }
 
 .booking-section {
     margin-bottom: 15px;
-    /* Reduce bottom margin for a more compact layout */
     padding: 10px;
-    /* Add padding for better spacing */
     background: #fff;
-    /* Ensure background contrasts nicely */
     border: 1px solid #e0e0e0;
-    /* Add subtle border for separation */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
 }
 
 .booking-section h2 {
     font-size: 1.1rem;
-    /* Make section titles smaller */
     margin-bottom: 10px;
 }
 
@@ -525,39 +502,26 @@ header.sticky .cart img {
 
 .booking-selection {
     display: flex;
-    /* Use flexbox for layout */
     flex-wrap: nowrap;
-    /* Prevent wrapping to the next line */
     justify-content: center;
-    /* Center images horizontally */
     gap: 10px;
-    /* Add space between images */
     background-color: #f0f8ff;
-    /* Soft blue background */
     padding: 20px;
     border-radius: 10px;
-    /* Rounded corners */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
 }
 
 .booking-selection img {
     width: 132px;
-    /* Adjust width to fit multiple images side by side */
     height: auto;
-    /* Maintain aspect ratio */
     border-radius: 5px;
-    /* Rounded corners for images */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .booking-selection img:hover {
     transform: scale(2);
-    /* Enlarge image on hover */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-    /* Add shadow effect */
     z-index: 10;
-    /* Ensure the image appears above others */
 }
 
 @media (max-width: 480px) {
@@ -570,7 +534,7 @@ header.sticky .cart img {
     }
 }
 
-/* Cart modal styling */
+/* Cart*/
 .cart-modal {
     display: none;
     position: fixed;
@@ -609,39 +573,26 @@ header.sticky .cart img {
 
 .booking-selection {
     display: flex;
-    /* Use flexbox for layout */
     flex-wrap: nowrap;
-    /* Prevent wrapping to the next line */
     justify-content: center;
-    /* Center images horizontally */
     gap: 10px;
-    /* Add space between images */
     background-color: #f0f8ff;
-    /* Soft blue background */
     padding: 20px;
     border-radius: 10px;
-    /* Rounded corners */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
 }
 
 .booking-selection img {
     width: 132px;
-    /* Adjust width to fit multiple images side by side */
     height: auto;
-    /* Maintain aspect ratio */
     border-radius: 5px;
-    /* Rounded corners for images */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .booking-selection img:hover {
     transform: scale(2);
-    /* Enlarge image on hover */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-    /* Add shadow effect */
     z-index: 10;
-    /* Ensure the image appears above others */
 }
 
 /* destination */
@@ -673,9 +624,7 @@ main {
         align-items: center;
         justify-content: center;
         gap: 20px;
-        /* Space between the two elements */
         margin: 2% auto;
-        /* Center align */
         flex-wrap: wrap;
     }
 
@@ -698,9 +647,7 @@ main {
         padding: 0 20px;
         max-width: 100%;
         position: relative;
-        /* Make sure the content stays above the blurred background */
         z-index: 1;
-        /* Ensure the content is on top of the blurred background */
     }
 
     .search-places {
@@ -757,15 +704,6 @@ main {
         /* Хулгана ороход өнгийг өөрчлөх */
     }
 
-    /* .radio-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 1% 0;
-        gap: 5px;
-        flex-wrap: nowrap;
-    } */
-
     & input[type='radio'] {
         display: none;
     }
@@ -777,13 +715,11 @@ main {
         padding: 8px 16px;
         border-radius: 20px;
         background: var(--background-color);
-        /* background: rgba(255, 255, 255, 0.1); */
         backdrop-filter: blur(5px);
         border: 1px solid var(--t);
         transition: all 0.3s ease;
         font-weight: 500;
         color: var(--primary-text-color);
-        /* color: #333; */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
         &:hover {
@@ -794,7 +730,6 @@ main {
 
         &::before {
             content: none;
-            /* Or comment out this block */
         }
     }
 
@@ -1187,7 +1122,6 @@ main {
     float: left;
     display: none;
     max-width: 100%;
-    /* margin-right: -100%; */
 }
 
 .carousel_item__active,
@@ -1341,19 +1275,16 @@ main {
 
 .destination-grid {
     padding-top: 50px;
-    /* padding-bottom: 0; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5%;
     text-align: center;
     margin: 2% 5%;
-    /* Adjusted margin-top to reduce space between icons and destinations */
     align-items: center;
 
     & img {
         width: 100%;
         height: 200px;
-        /* Энд тохиромжтой өндрийг оруулна уу */
         object-fit: cover;
         border-radius: 5%;
     }
@@ -1475,7 +1406,6 @@ main article {
     justify-content: center;
     padding: 24px;
     display: flex;
-    /* background-color: var(--background-color); */
 }
 
 .stat-icon {
@@ -1537,9 +1467,7 @@ h2 {
     padding: 0 100px;
     max-width: 1400px;
     position: relative;
-    /* Make sure the content stays above the blurred background */
     z-index: 1;
-    /* Ensure the content is on top of the blurred background */
 }
 
 .background {
@@ -1550,17 +1478,13 @@ h2 {
     height: 100%;
     background-size: cover;
     filter: blur(8px) opacity(0.7);
-    /* Blur and opacity */
     z-index: -1;
-    /* Behind the content */
 }
 
 .content {
     position: relative;
     z-index: 1;
-    /* Above the background */
     color: #fff;
-    /* Adjust text color for visibility */
     text-align: center;
     padding: 20px;
 }
@@ -1574,12 +1498,9 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    /* Remove default styles */
 }
 
 
-
-/* Media Queries for Responsiveness */
 @media (max-width: 767px) {
 
     .statistics {
@@ -1669,25 +1590,25 @@ ul {
 }
 
 .learn-more {
-    display: inline-block;       /* Makes the link behave like a button */
-    background-color: #7dd280;  /* Green background */
-    color: white;               /* White text */
-    padding: 10px 20px;         /* Add padding for a button-like appearance */
-    font-size: 14px;            /* Set font size */
-    text-decoration: none;      /* Remove underline */
-    border: 2px solid #7dd280;  /* Green border */
-    border-radius: 5px;         /* Slightly rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
-    cursor: pointer;            /* Pointer cursor on hover */
+    display: inline-block;       
+    background-color: #7dd280;  
+    color: white;              
+    padding: 10px 20px;        
+    font-size: 14px;            
+    text-decoration: none;     
+    border: 2px solid #7dd280;  
+    border-radius: 5px;        
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    cursor: pointer;            
 }
 
 .learn-more:hover {
-    background-color: white;    /* Invert background and text color on hover */
-    color: #7dd280;             /* Green text */
-    border-color: #7dd280;      /* Green border */
+    background-color: white;  
+    color: #7dd280;            
+    border-color: #7dd280;     
 }
 
 .learn-more:active {
-    background-color: #3e8e41;  /* Darker green when clicked */
-    color: white;               /* White text */
+    background-color: #3e8e41;  
+    color: white;               
 }

@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             //une bolon bairshliin neriig radio button bolgoj uusgej bga heseg
             data.radioContainer.forEach(filter => {
-                // Create input element
                 const input = document.createElement("input");
                 input.type = "radio";
                 input.id = filter.id;
@@ -15,12 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 input.value = filter.value;
                 if (filter.checked) input.checked = true;
 
-                // Create label element
                 const label = document.createElement("label");
                 label.htmlFor = filter.id;
                 label.textContent = filter.label;
 
-                // Append to container
                 filterContainer.appendChild(input);
                 filterContainer.appendChild(label);
             });
@@ -62,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 await renderArticles(selectedRegion, '', '', selectedPrice, selectedRating);
             });
 
-            // Initial render with default filters
             const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || 'All';
             const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || 'All';
             const selectedRating = document.getElementById('ratingFilter').value || 'All';
@@ -84,7 +80,7 @@ const fetchDestinations = async (filterRating = 'All', searchName = '') => {
             url.searchParams.append('name', searchName);
         }
 
-        // Make the request
+        // request
         const response = await fetch(url.toString());
         if (!response.ok) throw new Error('Failed to fetch destinations');
 
@@ -151,7 +147,6 @@ const renderArticles = async (filterRegion = 'All', searchName = '', searchPlace
         `;
         cityGrid.appendChild(article);
 
-        // Add click event listener to the favorite button
         const favoriteButton = article.querySelector('.favorite');
         favoriteButton.addEventListener('click', () => {
             addToFavorites(item);
@@ -161,13 +156,11 @@ const renderArticles = async (filterRegion = 'All', searchName = '', searchPlace
 
 //gazriig favorite ru nemehed ashiglana
 const addToFavorites = (destination) => {
-    // Get the current favorites from localStorage or an empty array if none exists
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-    // Check if the destination is already in favorites
     if (!favorites.some(fav => fav.name === destination.name)) {
-        favorites.push(destination); // Add to favorites
-        localStorage.setItem('favorites', JSON.stringify(favorites)); // Save to localStorage
+        favorites.push(destination); 
+        localStorage.setItem('favorites', JSON.stringify(favorites)); 
         alert(`${destination.name} аялал дуртай газрын тоонд нэмэгдлээ`);
     } else {
         alert(`${destination.name} аль хэдийн дуртай газрын тоонд байна`);
