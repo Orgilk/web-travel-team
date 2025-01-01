@@ -227,7 +227,6 @@ header.sticky .cart img {
 .day-cards {
     display: flex;
     overflow-x: auto;
-    /* horizontal scrolling */
     scroll-behavior: smooth;
     gap: 20px;
 }
@@ -600,8 +599,6 @@ header.sticky .cart img {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
-
-/* destination */
 
 /*index-n undsen container*/
 main {
