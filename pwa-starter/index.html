@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Adventure</title>
-    
-    <!-- <link rel="preload" href="./css/index.css" as="style"> -->
+   
     <link rel="preload" href="./css/header.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="all">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="/manifest.json?$modena=vue-personal-page">
+    <link rel="icon" type="image/png" href="/favicon.png?$modena=vue-personal-page">
     <script type="module" src="./components/header.js" defer></script>
     <script type="module" src="./components/footer.js" defer></script>
 </head>
@@ -96,9 +96,12 @@
                 </a>
             </article>
             <div class="button-container">
-                <button class="buttonn" onclick="window.location.href='destinations.html'">Бүх газрыг үзэх</button>
-                <div class="destination-section">
-                </div>
+                <button class="button" onclick="window.location.href='destinations.html'">Бүх газрыг үзэх</button>
+            </div>
+               
+                <!-- <div class="button-home">
+                    <button class="button" onclick="window.location.href='destinations.html'">Бүх газрыг үзэх</button>
+                </div> -->
 
         </section>
         <section class="carousel">
@@ -161,13 +164,12 @@
   
       </script>
 
-<script src="/{display_mode}/scripts/main.js"></script>
-
-<script>
-    // Register service worker
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-            navigator.serviceWorker.register("/{display_mode}/sw.js", { scope: '/{display_mode}/' });
+<script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js?$modena=vue-personal-page', {
+                scope: '/'
+            });
         });
     }
 </script>
