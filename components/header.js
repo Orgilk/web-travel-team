@@ -16,7 +16,7 @@ class Header extends HTMLElement {
                     </li>
                     <li><a href="./index.html">Нүүр</a></li>
                     <li><a href="./about.html">Бидний тухай</a></li>
-                    <li><a href="./destinations.html">Аялалууд</a></li>
+                    <li><a href="./destinations.html">Аяллууд</a></li>
                     <li><a href="./news.html">Мэдээ</a></li>
                     <li class="cart-item">
                         <a href="payment.html">
