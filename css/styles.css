@@ -262,6 +262,7 @@ header.sticky .cart img {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
 .package-column {
@@ -1422,7 +1423,6 @@ main article {
 }
 
 .stat-section {
-   /* border: 1px solid black; */
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
    padding: 30px;
 }
