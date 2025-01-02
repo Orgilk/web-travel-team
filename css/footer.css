@@ -8,7 +8,6 @@
     white-space: normal;
     width: 100%;
     overflow: hidden;
-    /* background-color: #2e2b2b33; */
     background: linear-gradient(45deg, #2e2b2b33, #fff);
 }
 
@@ -119,19 +118,13 @@
     .footer .content {
         display: flex; /* Хэсгүүдийг хажуу тийш зэрэгцүүлэх */
         justify-content: space-between; /* Хоорондын зайг жигд хуваарилах */
-        /* gap: 50px; */
+       
     }
     .social-links a {
         display: inline-block;
         height: 20px;
         width: 20px;
-        /* background-color: #ffffff33;
-        margin: 0 10px 10px 0;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 50%;
-        color: #0a0a0a;
-        transition: all 0.5s ease; */
+   
     }
 }
 
