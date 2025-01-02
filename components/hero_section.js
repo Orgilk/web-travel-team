@@ -50,13 +50,13 @@ class HeroSection extends HTMLElement {
       this.style.width = '100%';
       this.style.display = 'block';
   
-      // Preload all background images
+      // image unshah
       this.bgImages.forEach(src => {
         const img = new Image();
         img.src = src;
       });
   
-      // Change background image every 5 seconds
+      // 5 sec tutam zurag solih
       setInterval(() => {
         this.currentIndex = (this.currentIndex + 1) % this.bgImages.length;
         this.style.backgroundImage = `url(${this.bgImages[this.currentIndex]})`;
