@@ -805,9 +805,19 @@ main {
 
 .flip-card-front p {
     font-size: 12px;
+    color: var(--secondary-color);
 }
 
+.flip-card-front h4 {
+    color: var(--secondary-color)
+}
 
+.flip-card-front span {
+  color: var(--secondary-color)
+}
+.price {
+  color: var(--secondary-color)
+}
 .flip-card-back {
     background-color: #a5bba5;
     color: white;
@@ -845,11 +855,8 @@ main {
 .box {
     position: relative;
     width: 300px;
-    /* Example width */
     height: 300px;
-    /* Example height */
     background-color: lightgray;
-    /* Example background */
 }
 
 .pagination {
