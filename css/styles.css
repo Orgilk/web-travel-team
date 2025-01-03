@@ -21,11 +21,9 @@
     --card-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
   }
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-light);
-}
+    display: flex;
+    flex-direction: column;
+  }
 h2 {
     font-size: 1.5rem;
     margin-bottom: 1.25rem;
@@ -64,21 +62,6 @@ header.sticky .cart img {
     overflow: hidden;
 }
 
-.home-main {
-    position: relative;
-    background-image: var(--background-image);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: var(--text-color);
-    text-align: center;
-    padding: 3.125% 0;
-
-    & background-image {
-        width: 100%;
-        height: auto;
-    }
-}
 @keyframes slide-bg {
     0% {
         opacity: 0;
