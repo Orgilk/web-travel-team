@@ -1651,8 +1651,10 @@ ul {
   /* news */
   .news-grid {
     max-width: 100%;
-  }
-
+  } 
+   .reviews-grid{
+    max-width: 100%;
+   }
   /* destination highlight */
   .highlights-grid {
     max-width: 100%;
@@ -1857,7 +1859,9 @@ ul {
   .news-grid {
     max-width: 100%;
   }
-
+  .reviews-grid{
+    max-width: 100%;
+  }
   /* destination highlight */
   .highlights-grid {
     max-width: 100%;

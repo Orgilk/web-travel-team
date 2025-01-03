@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //gazruudiin medeelliig baazaas avch irj bga heseg
-const fetchDestinations = async (filterRating = 'All', searchName = '') => {
+const fetchDestinations = async (filterRating = 'All', searchPlaces = '') => {
     console.log("filterrating: ", filterRating)
     try {
         // baazaas ugugdul haihdaa rating bolon name-r haina
@@ -76,8 +76,8 @@ const fetchDestinations = async (filterRating = 'All', searchName = '') => {
         if (filterRating !== 'All') {
             url.searchParams.append('rating', filterRating);
         }
-        if (searchName) {
-            url.searchParams.append('name', searchName);
+        if (searchPlaces) {
+            url.searchParams.append('name', searchPlaces);
         }
 
         // request
@@ -102,18 +102,18 @@ const getPriceRange = (priceRange) => {
 };
 const renderArticles = async (filterRegion = 'All', searchName = '', searchPlaces = '', filterPrice = 'All', filterRating = 'All') => {
     const cityGrid = document.querySelector('.city-grid');
-    cityGrid.innerHTML = ''; // Clear grid
+    cityGrid.innerHTML = ''; 
 
     // baazaas medeelel avchirch bga
     const data = await fetchDestinations(filterRating, searchPlaces);
 
-    const [minPrice, maxPrice] = getPriceRange(filterPrice); // Get price range for filtering
+    const [minPrice, maxPrice] = getPriceRange(filterPrice); 
     //baazaas irsen data deerees hailt hiij bga
     const filteredData = data.filter(item => {
         const matchesRegion = filterRegion === 'All' || item.region === filterRegion;
         const matchesName = searchName === 'All' || item.name.toLowerCase().includes(searchName.toLowerCase());
         const matchesPrice = filterPrice === 'All' || (item.price >= minPrice && item.price <= maxPrice);
-        const matchesRating = filterRating === 'All' || item.rating >= parseInt(filterRating); // Compare with the rating
+        const matchesRating = filterRating === 'All' || item.rating >= parseInt(filterRating);
         return matchesRegion && matchesPrice && matchesName && matchesRating;
     });
     // irsen gazruudiin medeelliig urj bga heseg

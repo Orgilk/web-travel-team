@@ -50,7 +50,6 @@ class Header extends HTMLElement {
       this.updateCartCount();
       this.setupThemeToggle();
   
-      // Toggle menu on click
       const menuIcon = this.querySelector('#menuIcon');
       menuIcon.addEventListener('click', () => {
         this.toggleState('menuOpen');
@@ -64,10 +63,9 @@ class Header extends HTMLElement {
       });
     }
   
-    // Method to update the state
     toggleState(key) {
       this.state[key] = !this.state[key];
-      this.renderMenu();  // Ensure renderMenu is called immediately
+      this.renderMenu(); 
     }
   
     async updateCartCount() {

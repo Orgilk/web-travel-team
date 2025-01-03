@@ -372,7 +372,7 @@ class BookingSection extends HTMLElement {
         };
     }
 
-    //songoltiin datag duudaj avchirch bga heseg
+    //1 destination songoltiin datag duudaj avchirch bga heseg
     async loadOptionsData() {
         try {
             this.render(); 
@@ -386,7 +386,7 @@ class BookingSection extends HTMLElement {
         //direction medeelliig 9n gazraas damjuulj ug attributa-a component deeree haruulj bga.
         const direction = this.getAttribute('direction');
         //irsen direction buyu huvsgul gesen datagaaraa json-oso zuvhun ug gazriin medelliig haruulahad ashiglahad
-        const selectedDirection = this.jsonData.travelDirections.find(item => item.direction === direction); // Find the matching direction
+        const selectedDirection = this.jsonData.travelDirections.find(item => item.direction === direction); 
         if (!selectedDirection) {
             console.error('Direction not found');
             return;
