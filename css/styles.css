@@ -85,7 +85,6 @@ header.sticky .cart img {
         height: auto;
     }
 }
-
 @keyframes slide-bg {
     0% {
         opacity: 0;
@@ -102,10 +101,10 @@ header.sticky .cart img {
         transform: translateX(-100%);
     }
 }
- /* ergedeg 3 zurag */
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 100vh; /* Эхний байрлал хадгалагдана */
+    width: 100%;   /* Зурагны өргөнийг тогтооно */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,6 +129,7 @@ header.sticky .cart img {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     z-index: -1;
+    aspect-ratio: 16 / 9; /* Шинээр нэмэгдсэн */
 }
 
 .hero-section h1,
