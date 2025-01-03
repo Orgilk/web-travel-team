@@ -20,12 +20,6 @@
     --background-light: #2d3748;
     --card-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
   }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
