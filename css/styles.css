@@ -848,26 +848,6 @@ main input[type='radio']:checked + label::before {
   background-color: lightgray;
 }
 
-/* .pagination {
-  text-align: center;
-  margin-top: 5%;
-
-  .pagination-button {
-    background-color: var(--button-bg-color);
-    color: var(--button-color);
-    border: var(--button-border);
-    padding: var(--button-padding);
-    border-radius: var(--button-border-radius);
-    cursor: pointer;
-    box-shadow: var(--button-box-shadow);
-}
-
-.pagination-button.active {
-    background-color: var(--text-color);
-    color: var(--button-color);
-}
-
-} */
 .pagination {
   text-align: center;
   margin-top: 5%;
