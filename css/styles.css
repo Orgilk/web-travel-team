@@ -80,7 +80,7 @@ header.sticky .cart img {
   text-align: center;
   padding: 3.125% 0;
 
-  & background-image {
+   background-image {
     width: 100%;
     height: auto;
   }
@@ -863,7 +863,7 @@ main {
   text-align: center;
   margin-top: 5%;
 
-  & .pagination-button {
+   .pagination-button {
     background-color: var(--button-bg-color);
     color: var(--button-color);
     border: var(--button-border);
@@ -873,7 +873,7 @@ main {
     box-shadow: var(--button-box-shadow);
   }
 
-  & .pagination-button.active {
+   .pagination-button.active {
     background-color: var(--text-color);
     color: var(--button-color);
   }
@@ -1099,7 +1099,7 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%m 0.25);
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0% 0.25);
   float: left;
   display: none;
   max-width: 100%;
@@ -1309,7 +1309,7 @@ main {
   text-align: center;
   padding: 3.125% 0;
 
-  & background-image {
+   background-image {
     width: 100%;
     height: auto;
   }
@@ -1833,7 +1833,7 @@ ul {
     justify-content: center;
   }
   main {
-    & label {
+      label {
       font-size: 12px;
       padding: 5px;
       margin-left: 5px;
