@@ -30,7 +30,44 @@ paths:
                     description:
                       type: string
                       description: Details about the trip
-  
+
+    post:
+      summary: Create a new trip
+      description: Add a new trip to the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the trip
+                  example: "Adventure to the Alps"
+                description:
+                  type: string
+                  description: Details about the trip
+                  example: "A week-long trip to the Alps."
+      responses:
+        '201':
+          description: Trip created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The ID of the created trip
+                  name:
+                    type: string
+                    description: The name of the trip
+                  description:
+                    type: string
+                    description: The description of the trip
+        '400':
+          description: Invalid input
   /api/destinations:
     get:
       summary: Get all destinations
@@ -54,3 +91,41 @@ paths:
                     country:
                       type: string
                       description: The country of the destination
+
+    post:
+      summary: Add a new destination
+      description: Create a new destination in the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the destination
+                  example: "Paris"
+                country:
+                  type: string
+                  description: The country of the destination
+                  example: "France"
+      responses:
+        '201':
+          description: Destination created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The ID of the created destination
+                  name:
+                    type: string
+                    description: The name of the destination
+                  country:
+                    type: string
+                    description: The country of the destination
+        '400':
+          description: Invalid input
