@@ -5,10 +5,8 @@ class ItinerarySection extends HTMLElement {
         this.currentSlideIndex = 0;
         this.slides = [];
     }
-
     connectedCallback() {
         this.loadStyles();
-
         const itineraryData = this.getAttribute('data-days') 
             ? JSON.parse(this.getAttribute('data-days')) 
             : this.getDefaultItinerary();
