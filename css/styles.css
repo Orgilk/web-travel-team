@@ -523,7 +523,19 @@ header.sticky .cart img {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
-
+@media (prefers-color-scheme:dark){
+  :root{
+    background-color: #121212;
+    color:#ffffff;
+    --primary-color: #90cdf4;
+    --secondary-color: #63b3ed;
+    --accent-color: #ed8936;
+    --text-color: white;
+    --light-text: white;
+    --background-light: #2d3748;
+    --card-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  }
+}
 @media (max-width: 480px) {
   .booking-selection {
     flex-wrap: wrap;
