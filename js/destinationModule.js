@@ -1,22 +1,24 @@
+import { getData } from "../app.js";
+
 export async function fetchDestinations(filterRating = "All", searchPlaces = "") {
     try {
-        // gazruudiin medeelliig baazaas avch irj bga heseg
-        const url = new URL("http://localhost:5005/api/destinations");
+        const params = new URLSearchParams();
 
         if (filterRating !== "All") {
-            url.searchParams.append("rating", filterRating);
+            params.append("rating", filterRating);
         }
 
         if (searchPlaces) {
-            url.searchParams.append("name", searchPlaces);
+            params.append("name", searchPlaces);
         }
 
-        const response = await fetch(url.toString());
-        if (!response.ok) throw new Error("Failed");
+        // Use the getData function with the `destinations` endpoint and search parameters
+        const url = `destinations?${params.toString()}`;
+        const data = await getData(url); // Fetch data using getData function
 
-        return await response.json();
+        return data;
     } catch (error) {
-        console.error("Error:", error);
+        console.error("Error fetching destinations:", error);
         return [];
     }
 }
