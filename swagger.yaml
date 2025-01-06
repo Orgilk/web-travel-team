@@ -54,4 +54,76 @@ paths:
                     country:
                       type: string
                       description: The country of the destination
+    post:
+      summary: Add a new destination
+      description: Create a new destination and add it to the list of destinations.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                region:
+                  type: string
+                  description: The region of the destination (e.g., Говь, Хангай).
+                  example: Говь
+                name:
+                  type: string
+                  description: The name of the destination.
+                  example: Хонгорын элс
+                image:
+                  type: string
+                  description: The image URL or path for the destination.
+                  example: assets/hongor_els.jpg
+                link:
+                  type: string
+                  description: A link to more details about the destination.
+                  example: hongoriinels.html
+                rating:
+                  type: integer
+                  description: The rating of the destination (out of 5).
+                  example: 2
+                price:
+                  type: number
+                  description: The price for visiting the destination.
+                  example: 550000
+                description:
+                  type: string
+                  description: A detailed description of the destination.
+                  example: >
+                    Хонгорын элс нь Өмнөговь аймгийн Сэврэй.Баяндалай сумдын нутагт орших бөгөөд 
+                    Сэврэй, Зөөлөнгийн нурууны араар 180 орчим км үргэлжилдэг элсэн манхан юм.
+      responses:
+        '201':
+          description: Destination created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The newly created destination ID.
+                  message:
+                    type: string
+                    description: Success message.
+                  data:
+                    type: object
+                    properties:
+                      region:
+                        type: string
+                      name:
+                        type: string
+                      image:
+                        type: string
+                      link:
+                        type: string
+                      rating:
+                        type: integer
+                      price:
+                        type: number
+                      description:
+                        type: string
+
   
