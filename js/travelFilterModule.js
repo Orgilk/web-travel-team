@@ -24,7 +24,7 @@ export class TravelFilter {
             renderFilters(filters, this.filterContainer);
             addFilterEventListeners(this.searchNameInput, this.searchPlacesInput, () => this.handleFilters());
     
-            // parameteriig URL-aas unshina
+            // parameteriig URL-aas unshina.share hiihed tuluvu hadgalna
             const urlParams = new URLSearchParams(window.location.search);
             const regionFromUrl = urlParams.get("region") || "All";
             const priceFromUrl = urlParams.get("price") || "All";

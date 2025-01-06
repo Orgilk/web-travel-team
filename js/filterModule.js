@@ -33,9 +33,13 @@ export function addFilterEventListeners(searchNameInput, searchPlacesInput, filt
             url.searchParams.set("region", selectedRegion);
             url.searchParams.set("price", selectedPrice);
 
+            // songoltoor
+            url.searchParams.set("searchName", searchNameInput.value);
+            url.searchParams.set("searchPlaces", searchPlacesInput.value);
+
             window.history.pushState({}, '', url);
 
-            filterCallback(); // callback render songoson gazar
+            filterCallback(); // shuuses ur dung calback-aar renderlene
         });
     });
 
