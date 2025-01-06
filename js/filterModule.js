@@ -16,6 +16,7 @@ export function renderFilters(filters, filterContainer) {
         filterContainer.appendChild(label);
     });
 }
+// deed taliin search heseg deer songoson url-iig haruulna 
 export function addFilterEventListeners(searchNameInput, searchPlacesInput, filterCallback) {
     const radioButtons = document.querySelectorAll('input[name="sort"], input[name="price"]');
 

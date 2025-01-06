@@ -33,15 +33,15 @@ export class TravelFilter {
             const searchPlacesFromUrl = urlParams.get("searchPlaces") || "";
     
     
-            // Set radio buttons based on URL parameters
-            this.setRadioButtonValue('sort', regionFromUrl);  // For region filter
-            this.setRadioButtonValue('price', priceFromUrl);  // For price filter
-            document.getElementById("ratingFilter").value = ratingFromUrl; // Set rating filter
+            // url parametras radio button-g shiidne
+            this.setRadioButtonValue('sort', regionFromUrl);  
+            this.setRadioButtonValue('price', priceFromUrl); 
+            document.getElementById("ratingFilter").value = ratingFromUrl; 
     
-            // Trigger filter rendering based on URL parameters
+            // filter rendering
             await this.renderArticles(regionFromUrl, searchNameFromUrl, searchPlacesFromUrl, priceFromUrl, ratingFromUrl);
     
-            // Call handleFilters to apply any filters if needed (if they haven't been applied already)
+            // handleFilters onogdogui bol shuud hucher ugnu
             this.handleFilters();
     
         } catch (error) {
@@ -56,7 +56,7 @@ export class TravelFilter {
         return await response.json();
     }
     async handleFilters() {
-        // Read parameters from the URL
+        // URL-aas parametriig unshina
         const urlParams = new URLSearchParams(window.location.search);
         console.log("urlParams: ", urlParams)
         const selectedRegion = urlParams.get("region") || "All";
@@ -65,13 +65,13 @@ export class TravelFilter {
         const searchName = this.searchNameInput.value || "";
         const searchPlaces = this.searchPlacesInput.value || "";
     
-        // Call renderArticles with these parameters
+        // renderArticles daraah parametrudeer duudna
         await this.renderArticles(selectedRegion, searchName, searchPlaces, selectedPrice, selectedRating);
     }
     
     async renderArticles(filterRegion = "All", searchName = "", searchPlaces = "", filterPrice = "All", filterRating = "All") {
         this.cityGrid.innerHTML = "";
-        // Fetch data with the current filters
+        // data-g Fetch hiij avchirj bn 
         const data = await fetchDestinations(filterRating, searchPlaces);
         const [minPrice, maxPrice] = getPriceRange(filterPrice);
     
