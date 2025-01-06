@@ -14,7 +14,7 @@ export async function fetchDestinations(filterRating = "All", searchPlaces = "")
 
         // getdata funktseer destinationees parametr haina
         const url = `destinations?${params.toString()}`;
-        const data = await getData(url); // Fetch data using getData function
+        const data = await getData(url); // Fetch data /getData/
 
         return data;
     } catch (error) {

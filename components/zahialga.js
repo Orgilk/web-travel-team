@@ -12,7 +12,7 @@ class BookingSection extends HTMLElement {
     this.selectedOptions = { duration: 0, hotel: 0, meal: 0, transport: 0 }
     this.peopleCount = { adults: 0, children: 0 }
     this.attachShadow({ mode: 'open' })
-    this.itenary = new Map() // Initialize the itenary map
+    this.itenary = new Map() 
   }
 
   connectedCallback () {
@@ -90,7 +90,6 @@ class BookingSection extends HTMLElement {
   }
 
   createBookingSection (title, type, options) {
-    // Create an object with booking data
     const sectionData = {
       title,
       type,
@@ -102,7 +101,7 @@ class BookingSection extends HTMLElement {
       }))
     }
 
-    // Add the section data to the itenary map using title as the key
+    // title iig ashiglaj data-g nemne
     this.itenary.set(title, sectionData)
 
     return `
@@ -151,13 +150,13 @@ class BookingSection extends HTMLElement {
       .getElementById('adult-count')
       .addEventListener('input', () => {
         updatePeopleCount(this)
-        calculateTotalPrice(this) // Recalculate price when people count changes
+        calculateTotalPrice(this)
       })
     this.shadowRoot
       .getElementById('child-count')
       .addEventListener('input', () => {
         updatePeopleCount(this)
-        calculateTotalPrice(this) // Recalculate price when people count changes
+        calculateTotalPrice(this) 
       })
     this.shadowRoot
       .getElementById('bookBtn')
