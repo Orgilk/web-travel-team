@@ -79,7 +79,7 @@ class ItinerarySection extends HTMLElement {
     moveSlide(direction, container) {
         this.currentSlideIndex += direction;
         if (this.currentSlideIndex < 0) {
-            this.currentSlideIndex = this.itenary.size - 1; // Use 'itenary' here instead of 'card'
+            this.currentSlideIndex = this.itenary.size - 1; 
         } else if (this.currentSlideIndex >= this.itenary.size) {
             this.currentSlideIndex = 0;
         }

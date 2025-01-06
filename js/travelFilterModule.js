@@ -24,7 +24,7 @@ export class TravelFilter {
             renderFilters(filters, this.filterContainer);
             addFilterEventListeners(this.searchNameInput, this.searchPlacesInput, () => this.handleFilters());
     
-            // Read parameters from the URL
+            // parameteriig URL-aas unshina
             const urlParams = new URLSearchParams(window.location.search);
             const regionFromUrl = urlParams.get("region") || "All";
             const priceFromUrl = urlParams.get("price") || "All";
@@ -32,9 +32,6 @@ export class TravelFilter {
             const searchNameFromUrl = urlParams.get("searchName") || "";
             const searchPlacesFromUrl = urlParams.get("searchPlaces") || "";
     
-            // Set initial values based on URL
-            this.searchNameInput.value = searchNameFromUrl;
-            this.searchPlacesInput.value = searchPlacesFromUrl;
     
             // Set radio buttons based on URL parameters
             this.setRadioButtonValue('sort', regionFromUrl);  // For region filter

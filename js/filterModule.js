@@ -32,13 +32,9 @@ export function addFilterEventListeners(searchNameInput, searchPlacesInput, filt
             url.searchParams.set("region", selectedRegion);
             url.searchParams.set("price", selectedPrice);
 
-            // Optionally add other parameters (like search name and places)
-            url.searchParams.set("searchName", searchNameInput.value);
-            url.searchParams.set("searchPlaces", searchPlacesInput.value);
-
             window.history.pushState({}, '', url);
 
-            filterCallback(); // callback to render filtered results
+            filterCallback(); // callback render songoson gazar
         });
     });
 

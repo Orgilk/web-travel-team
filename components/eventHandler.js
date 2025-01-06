@@ -95,7 +95,7 @@ export function processBooking(context) {
     localStorage.setItem('bookingList', JSON.stringify(bookingList));
     alert('Захиалга амжилттай!');
 
-    // Use the postData helper function to send data to the API
+    // ugugdul API luu damjuulna
     postData('trips', bookingDetails)
         .then(data => {
             console.log('Захиалга нэмэгдлээ:', data);

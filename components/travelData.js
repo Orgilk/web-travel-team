@@ -1,4 +1,3 @@
-// travelData.js
 
 export const jsonData = {
     "travelDirections": [

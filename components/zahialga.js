@@ -1,4 +1,3 @@
-// import { calculateTotalPrice, updateCartCount } from './utils.js';
 import { jsonData } from './travelData.js'
 import {
   handleOptionCardClick,

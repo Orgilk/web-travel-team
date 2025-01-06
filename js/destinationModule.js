@@ -12,7 +12,7 @@ export async function fetchDestinations(filterRating = "All", searchPlaces = "")
             params.append("name", searchPlaces);
         }
 
-        // Use the getData function with the `destinations` endpoint and search parameters
+        // getdata funktseer destinationees parametr haina
         const url = `destinations?${params.toString()}`;
         const data = await getData(url); // Fetch data using getData function
 
