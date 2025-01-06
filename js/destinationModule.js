@@ -12,9 +12,9 @@ export async function fetchDestinations(filterRating = "All", searchPlaces = "")
             params.append("name", searchPlaces);
         }
 
-        // getdata funktseer destinationees parametr haina
+        // Use the getData function with the `destinations` endpoint and search parameters
         const url = `destinations?${params.toString()}`;
-        const data = await getData(url); // Fetch data /getData/
+        const data = await getData(url); // Fetch data getData function
 
         return data;
     } catch (error) {
@@ -32,6 +32,7 @@ export function getPriceRange(priceRange) {
     };
     return priceRanges[priceRange] || [0, Infinity];
 }
+
 // irsen gazruudiin medeelliig urj bga heseg
 export function createArticle(item, cityGrid, addToFavorites) {
     const article = document.createElement("article");
@@ -65,5 +66,14 @@ export function createArticle(item, cityGrid, addToFavorites) {
     cityGrid.appendChild(article);
 
     const favoriteButton = article.querySelector(".favorite");
-    favoriteButton.addEventListener("click", () => addToFavorites(item));
+    favoriteButton.addEventListener("click", () => {
+        // Call the addToFavorites function
+        addToFavorites(item);
+
+        // Dispatch a custom event
+        const event = new CustomEvent("favoriteToggled", {
+            detail: { item },
+        });
+        favoriteButton.dispatchEvent(event);
+    });
 }
