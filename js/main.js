@@ -1,5 +1,5 @@
-// import { TravelFilter } from './travelFilterModule.js';
+import { TravelFilter } from "./travelFilterModule.js";
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     new TravelFilter();
-// });
+document.addEventListener("DOMContentLoaded", () => {
+    new TravelFilter();
+});

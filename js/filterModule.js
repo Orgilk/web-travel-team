@@ -1,37 +1,41 @@
-// export class Filter {
-//     constructor(filterContainerId, searchNameId, searchPlacesId) {
-//         this.filterContainer = document.getElementById(filterContainerId);
-//         this.searchNameInput = document.getElementById(searchNameId);
-//         this.searchPlacesInput = document.getElementById(searchPlacesId);
-//         this.cityGrid = document.querySelector(".city-grid");
-//     }
+export function renderFilters(filters, filterContainer) {
+    filters.radioContainer.forEach(filter => {
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.id = filter.id;
+        input.name = filter.name;
+        input.value = filter.value;
+        if (filter.checked) input.checked = true;
 
-//     async fetchFilters(url) {
-//         const response = await fetch(url);
-//         if (!response.ok) throw new Error("Failed to fetch filters");
-//         return await response.json();
-//     }
+        const label = document.createElement("label");
+        label.htmlFor = filter.id;
+        label.textContent = filter.label;
 
-//     renderFilters(filters) {
-//         filters.radioContainer.forEach(filter => {
-//             const input = document.createElement("input");
-//             input.type = "radio";
-//             input.id = filter.id;
-//             input.name = filter.name;
-//             input.value = filter.value;
-//             if (filter.checked) input.checked = true;
+        filterContainer.appendChild(input);
+        filterContainer.appendChild(label);
+    });
+}
 
-//             const label = document.createElement("label");
-//             label.htmlFor = filter.id;
-//             label.textContent = filter.label;
+export function addFilterEventListeners(searchNameInput, searchPlacesInput, filterCallback) {
+    const radioButtons = document.querySelectorAll('input[name="sort"], input[name="price"]');
 
-//             this.filterContainer.appendChild(input);
-//             this.filterContainer.appendChild(label);
-//         });
-//     }
+    searchNameInput.addEventListener("input", filterCallback);
+    searchPlacesInput.addEventListener("input", filterCallback);
 
-//     addEventListeners(callbacks) {
-//         this.searchNameInput.addEventListener("input", () => callbacks.handleFilters());
-//         this.searchPlacesInput.addEventListener("input", () => callbacks.handleFilters());
-//     }
-// }
+    radioButtons.forEach(button => {
+        button.addEventListener("change", () => {
+            const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || "All";
+            const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || "All";
+
+            // Update URL based on filter selection
+            const url = new URL(window.location.href);
+            url.searchParams.set("region", selectedRegion);
+            url.searchParams.set("price", selectedPrice);
+            window.history.pushState({}, '', url);
+
+            filterCallback(); // Trigger the filter callback after updating the URL
+        });
+    });
+
+    document.getElementById("ratingFilter").addEventListener("change", filterCallback);
+}
