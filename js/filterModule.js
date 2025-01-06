@@ -1,4 +1,5 @@
 export function renderFilters(filters, filterContainer) {
+    // une bolon bairshliin neriig radio button bolgoj uusgej bga heseg
     filters.radioContainer.forEach(filter => {
         const input = document.createElement("input");
         input.type = "radio";
@@ -15,7 +16,7 @@ export function renderFilters(filters, filterContainer) {
         filterContainer.appendChild(label);
     });
 }
-
+        //    une bolon region-oor url gargaj baiga heseg
 export function addFilterEventListeners(searchNameInput, searchPlacesInput, filterCallback) {
     const radioButtons = document.querySelectorAll('input[name="sort"], input[name="price"]');
 
@@ -27,13 +28,13 @@ export function addFilterEventListeners(searchNameInput, searchPlacesInput, filt
             const selectedRegion = document.querySelector('input[name="sort"]:checked')?.value || "All";
             const selectedPrice = document.querySelector('input[name="price"]:checked')?.value || "All";
 
-            // Update URL based on filter selection
+            // Update URL
             const url = new URL(window.location.href);
             url.searchParams.set("region", selectedRegion);
             url.searchParams.set("price", selectedPrice);
             window.history.pushState({}, '', url);
 
-            filterCallback(); // Trigger the filter callback after updating the URL
+            filterCallback(); // callback duudna
         });
     });
 

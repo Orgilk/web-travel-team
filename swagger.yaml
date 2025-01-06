@@ -143,3 +143,4 @@ paths:
                     country:
                       type: string
                       description: The country of the destination
+   

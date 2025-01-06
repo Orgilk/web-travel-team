@@ -1,5 +1,6 @@
 export async function fetchDestinations(filterRating = "All", searchPlaces = "") {
     try {
+        // gazruudiin medeelliig baazaas avch irj bga heseg
         const url = new URL("http://localhost:5005/api/destinations");
 
         if (filterRating !== "All") {
@@ -29,7 +30,7 @@ export function getPriceRange(priceRange) {
     };
     return priceRanges[priceRange] || [0, Infinity];
 }
-
+// irsen gazruudiin medeelliig urj bga heseg
 export function createArticle(item, cityGrid, addToFavorites) {
     const article = document.createElement("article");
     article.setAttribute("data-region", item.region);

@@ -20,21 +20,13 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    event.respondWith(async function() {
-        const networkPromise = fetch(event.request);
-        const cachePromise = caches.open(myCache);
-
-        try {
-            const networkResponse = await networkPromise;
-            cachePromise
-                .then(cache => {
-                    cache.put(event.request, networkResponse);
-                });
-            return networkResponse.clone();
-        } catch (error) {
-            const cache = await cachePromise;
-            const cacheResponse = await cache.match(event.request);
-            return cacheResponse;
-        }
-    }());
+    if (event.request.method === 'GET') {
+        event.respondWith(
+            caches.match(event.request).then((cachedResponse) => {
+                return cachedResponse || fetch(event.request);
+            })
+        );
+    } else {
+        event.respondWith(fetch(event.request));
+    }
 });

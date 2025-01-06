@@ -37,6 +37,7 @@ export class TravelFilter {
 
     async renderArticles(filterRegion = "All", searchName = "", searchPlaces = "", filterPrice = "All", filterRating = "All") {
         this.cityGrid.innerHTML = "";
+        // baazaas medeelel avchirch bga
         const data = await fetchDestinations(filterRating, searchPlaces);
         const [minPrice, maxPrice] = getPriceRange(filterPrice);
 
