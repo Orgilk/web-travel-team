@@ -3,15 +3,18 @@ class ItinerarySection extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         this.currentSlideIndex = 0;
-        this.slides = [];
+        this.itenary = new Map(); 
     }
+
     connectedCallback() {
         this.loadStyles();
-        const itineraryData = this.getAttribute('data-days') 
-            ? JSON.parse(this.getAttribute('data-days')) 
+        const itineraryData = this.getAttribute('data-days')
+            ? JSON.parse(this.getAttribute('data-days'))
             : this.getDefaultItinerary();
 
-        this.slides = itineraryData;
+        itineraryData.forEach((slide, index) => {
+            this.itenary.set(index + 1, slide); 
+        });
 
         this.render();
         this.addEventListeners();
@@ -20,9 +23,10 @@ class ItinerarySection extends HTMLElement {
     loadStyles() {
         const link = document.createElement('link');
         link.setAttribute('rel', 'stylesheet');
-        link.setAttribute('href', './css/styles.css'); 
+        link.setAttribute('href', './css/styles.css');
         this.shadowRoot.appendChild(link);
     }
+
     //urdaas data ireegu bol haruulna
     getDefaultItinerary() {
         return [
@@ -31,10 +35,13 @@ class ItinerarySection extends HTMLElement {
             { img: 'assets/huwsg.png', title: '3-р өдөр - Соёлын танилцуулга', description: 'Өрхийн уламжлалт амьдралтай танилцах.' },
         ];
     }
-    //damjij irsen datag set hiij haruuj bga
+
+     //damjij irsen datag set hiij haruuj bga
     render() {
-        const slidesHTML = this.slides
-            .map(slide => `
+        let slidesHTML = '';
+        
+        this.itenary.forEach((slide, key) => { 
+            slidesHTML += `
                 <div class="day-card">
                     <img src="${slide.img}" alt="${slide.title}">
                     <div class="day-details">
@@ -42,8 +49,8 @@ class ItinerarySection extends HTMLElement {
                         <p>${slide.description}</p>
                     </div>
                 </div>
-            `)
-            .join('');
+            `;
+        });
 
         this.shadowRoot.innerHTML += `
             <section class="itinerary-section">
@@ -58,7 +65,8 @@ class ItinerarySection extends HTMLElement {
             </section>
         `;
     }
-    //uragshaa hoishoo guilgehiig handle hiij bga
+
+      //uragshaa hoishoo guilgehiig handle hiij bga
     addEventListeners() {
         const prevBtn = this.shadowRoot.querySelector('.prev');
         const nextBtn = this.shadowRoot.querySelector('.next');
@@ -71,8 +79,8 @@ class ItinerarySection extends HTMLElement {
     moveSlide(direction, container) {
         this.currentSlideIndex += direction;
         if (this.currentSlideIndex < 0) {
-            this.currentSlideIndex = this.slides.length - 1;
-        } else if (this.currentSlideIndex >= this.slides.length) {
+            this.currentSlideIndex = this.itenary.size - 1; // Use 'itenary' here instead of 'card'
+        } else if (this.currentSlideIndex >= this.itenary.size) {
             this.currentSlideIndex = 0;
         }
 
