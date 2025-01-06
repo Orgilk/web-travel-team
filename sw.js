@@ -8,7 +8,7 @@ self.addEventListener('install', (event) => {
         ]);
     }());
 });
-
+// massive iin buh elementiig doorh functseer damjuulj ustgah uildel hiij bn
 self.addEventListener('activate', (event) => {
     event.waitUntil(async function() {
         const cache = await caches.open(myCache);
