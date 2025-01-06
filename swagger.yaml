@@ -30,7 +30,96 @@ paths:
                     description:
                       type: string
                       description: Details about the trip
-
+    post:
+      summary: Create a new trip order
+      description: Add a new trip booking order to the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                duration:
+                  type: string
+                  description: Duration of the trip.
+                  example: 7 days
+                hotel:
+                  type: string
+                  description: Selected hotel for the trip.
+                  example: Deluxe Hotel
+                meal:
+                  type: string
+                  description: Selected meal plan.
+                  example: Full board
+                transport:
+                  type: string
+                  description: Selected transport type.
+                  example: Private car
+                adults:
+                  type: integer
+                  description: Number of adults.
+                  example: 2
+                children:
+                  type: integer
+                  description: Number of children.
+                  example: 1
+                totalPrice:
+                  type: number
+                  description: Total price of the trip.
+                  example: 1500000
+                sumPrice:
+                  type: number
+                  description: Sum price for all bookings.
+                  example: 1800000
+                destination:
+                  type: string
+                  description: Selected destination.
+                  example: Хөвсгөл нуур
+              required:
+                - duration
+                - hotel
+                - meal
+                - transport
+                - adults
+                - children
+                - totalPrice
+                - destination
+      responses:
+        '201':
+          description: Trip order created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The ID of the created trip order.
+                  message:
+                    type: string
+                    description: Success message.
+                  data:
+                    type: object
+                    properties:
+                      duration:
+                        type: string
+                      hotel:
+                        type: string
+                      meal:
+                        type: string
+                      transport:
+                        type: string
+                      adults:
+                        type: integer
+                      children:
+                        type: integer
+                      totalPrice:
+                        type: number
+                      sumPrice:
+                        type: number
+                      destination:
+                        type: string
   /api/destinations:
     get:
       summary: Get all destinations
@@ -54,76 +143,3 @@ paths:
                     country:
                       type: string
                       description: The country of the destination
-    post:
-      summary: Add a new destination
-      description: Create a new destination and add it to the list of destinations.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                region:
-                  type: string
-                  description: The region of the destination (e.g., Говь, Хангай).
-                  example: Говь
-                name:
-                  type: string
-                  description: The name of the destination.
-                  example: Хонгорын элс
-                image:
-                  type: string
-                  description: The image URL or path for the destination.
-                  example: assets/hongor_els.jpg
-                link:
-                  type: string
-                  description: A link to more details about the destination.
-                  example: hongoriinels.html
-                rating:
-                  type: integer
-                  description: The rating of the destination (out of 5).
-                  example: 2
-                price:
-                  type: number
-                  description: The price for visiting the destination.
-                  example: 550000
-                description:
-                  type: string
-                  description: A detailed description of the destination.
-                  example: >
-                    Хонгорын элс нь Өмнөговь аймгийн Сэврэй.Баяндалай сумдын нутагт орших бөгөөд 
-                    Сэврэй, Зөөлөнгийн нурууны араар 180 орчим км үргэлжилдэг элсэн манхан юм.
-      responses:
-        '201':
-          description: Destination created successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  id:
-                    type: integer
-                    description: The newly created destination ID.
-                  message:
-                    type: string
-                    description: Success message.
-                  data:
-                    type: object
-                    properties:
-                      region:
-                        type: string
-                      name:
-                        type: string
-                      image:
-                        type: string
-                      link:
-                        type: string
-                      rating:
-                        type: integer
-                      price:
-                        type: number
-                      description:
-                        type: string
-
-  
