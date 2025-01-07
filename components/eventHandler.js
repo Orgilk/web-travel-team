@@ -37,25 +37,39 @@ export async function updateCartCount() {
     }
 }
 
-
 export function handleOptionCardClick(event, context) {
     const card = event.currentTarget;
     const type = card.getAttribute('data-type');
     const price = parseInt(card.getAttribute('data-price')) || 0;
 
+    // ijil turliin zurguudiig songoho bolih
     context.shadowRoot.querySelectorAll(`.option-card[data-type="${type}"]`).forEach(otherCard => {
         otherCard.classList.remove('selected');
         const imgSection = otherCard.querySelector('.booking-selection');
-        if (imgSection) imgSection.style.display = 'none'; 
+        if (imgSection) imgSection.style.display = 'none';
     });
 
+    // card songoh
     card.classList.add('selected');
     const imgSection = card.querySelector('.booking-selection');
-    if (imgSection) imgSection.style.display = 'block'; 
+    if (imgSection) imgSection.style.display = 'block';
 
+    // songoson cartudiig update hiih
     context.selectedOptions[type] = price;
-    calculateTotalPrice(context);
 
+    // songoltiin uurchlultiig medegdehiin tuld custom elementiig ilgeene 
+    const selectionEvent = new CustomEvent('optionSelected', {
+        detail: {
+            type, 
+            price, 
+            selectedCard: card 
+        },
+        bubbles: true,
+        composed: true 
+    });
+    context.dispatchEvent(selectionEvent);
+
+    calculateTotalPrice(context);
 }
 
 export function updatePeopleCount(context) {
