@@ -12,7 +12,7 @@ export async function fetchDestinations(filterRating = "All", searchPlaces = "")
             params.append("name", searchPlaces);
         }
 
-        // Use the getData function with the `destinations` endpoint and search parameters
+        // getData funcktseer destination endpoind-oor 
         const url = `destinations?${params.toString()}`;
         const data = await getData(url); // Fetch data getData function
 
@@ -67,10 +67,10 @@ export function createArticle(item, cityGrid, addToFavorites) {
 
     const favoriteButton = article.querySelector(".favorite");
     favoriteButton.addEventListener("click", () => {
-        // Call the addToFavorites function
+        // addToFavorites funcktsiig duudna
         addToFavorites(item);
 
-        // Dispatch a custom event
+        // custom event-iig ilgeene
         const event = new CustomEvent("favoriteToggled", {
             detail: { item },
         });

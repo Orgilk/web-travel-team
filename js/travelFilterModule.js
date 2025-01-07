@@ -56,7 +56,7 @@ export class TravelFilter {
         return await response.json();
     }
     async handleFilters() {
-        // URL-aas parametriig unshina
+        // URL-aas parametriig unshina.songoson data-g url-aas avna
         const urlParams = new URLSearchParams(window.location.search);
         console.log("urlParams: ", urlParams)
         const selectedRegion = urlParams.get("region") || "All";
@@ -74,8 +74,8 @@ export class TravelFilter {
         // data-g Fetch hiij avchirj bn 
         const data = await fetchDestinations(filterRating, searchPlaces);
         const [minPrice, maxPrice] = getPriceRange(filterPrice);
-    
-        const filteredData = data.filter(item => {
+    //baiga range-d songoson data-ni baiga esehiig shalgana
+         const filteredData = data.filter(item => {
             const matchesRegion = filterRegion === "All" || item.region === filterRegion;
             const matchesName = searchName === "" || item.name.toLowerCase().includes(searchName.toLowerCase());
             const matchesPrice = filterPrice === "All" || (item.price >= minPrice && item.price <= maxPrice);

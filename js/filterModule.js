@@ -39,7 +39,7 @@ export function addFilterEventListeners(searchNameInput, searchPlacesInput, filt
 
             window.history.pushState({}, '', url);
 
-            filterCallback(); // shuuses ur dung calback-aar renderlene
+            filterCallback(); // shuusen ur dung calback-aar renderlene
         });
     });
 
