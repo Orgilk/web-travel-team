@@ -64,8 +64,6 @@ export function handleOptionCardClick(event, context) {
             price, 
             selectedCard: card 
         },
-        bubbles: true,
-        composed: true 
     });
     context.dispatchEvent(selectionEvent);
 
